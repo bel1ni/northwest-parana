@@ -360,12 +360,20 @@
     /* ---- sem passagem automática: navegação só manual ---- */
     function reiniciarAuto(){}
 
-    /* ---- SWIPE (arrastar no celular) ---- */
-    let x0=null;
-    carrossel.addEventListener('touchstart',e=>{x0=e.touches[0].clientX;},{passive:true});
-    carrossel.addEventListener('touchend',e=>{ if(x0===null)return;
+    /* ---- SWIPE (arrastar no celular) ----
+       Só navega se o gesto for CLARAMENTE horizontal, para não confundir
+       com a rolagem vertical da página (que jogava o carrossel pro fim). */
+    let x0=null,y0=null;
+    carrossel.addEventListener('touchstart',e=>{x0=e.touches[0].clientX;y0=e.touches[0].clientY;},{passive:true});
+    carrossel.addEventListener('touchend',e=>{
+      if(x0===null)return;
       const dx=e.changedTouches[0].clientX-x0;
-      if(dx<-45)irNext(); if(dx>45)anterior(); x0=null; },{passive:true});
+      const dy=e.changedTouches[0].clientY-y0;
+      if(Math.abs(dx)>50 && Math.abs(dx)>Math.abs(dy)*1.5){  // horizontal domina
+        if(dx<0)irNext(); else anterior();
+      }
+      x0=null;y0=null;
+    },{passive:true});
 
     /* ---- INÍCIO ---- */
     visiveis=pontos.map((p,i)=>i);
