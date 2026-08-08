@@ -429,7 +429,9 @@ const REMOVER = new Set([
   "Farol","Quarto Centenário",
   // Maringá (cidades muito pequenas, sem atração específica — confira se quiser)
   "Ângulo","Atalaia","Cambira","Floraí","Floresta","Flórida","Iguaraçu",
-  "Itambé","Ivatuba","Lobato","Ourizona"
+  "Itambé","Ivatuba","Lobato","Ourizona",
+  // removida a pedido
+  "Uniflor"
 ]);
 
 const CURADORIA = {
