@@ -507,9 +507,8 @@ const CURADORIA = {
   "Cidade Gaúcha": { emoji:"🌳", locais:[
     {nome:"Bosque do Leão", query:"Bosque do Leão, Cidade Gaúcha, PR"},
     {nome:"Igreja Matriz", query:"Paróquia Santa Maria Goretti, Cidade Gaúcha, PR"} ] },
-  "Guaporema": { emoji:"⛲", locais:[
-    {nome:"Praça da Matriz", query:"Praça da Matriz, Guaporema, PR"},
-    {nome:"Igreja São Pedro Apóstolo", query:"Igreja Matriz São Pedro Apóstolo, Guaporema, PR"} ] },
+  "Guaporema": { emoji:"⛪", credito:"Leandro Manso", locais:[
+    {nome:"Paróquia São José", link:"https://maps.app.goo.gl/ih2JxLuBxD7G59Sa7"} ] },
   "Indianópolis": { emoji:"💧", locais:[
     {nome:"Cachoeira dos Índios", query:"Cachoeira dos Índios, Indianópolis, PR"},
     {nome:"Praça Central", query:"Praça Central, Indianópolis, PR"} ] },
@@ -639,6 +638,7 @@ function aplicarCuradoria(p){
   const cur = CURADORIA[p.cidade];
   if(!cur) return p;
   p.locais = cur.locais;
+  if(cur.credito) p.credito = cur.credito;
   if(cur.emoji) p.emoji = cur.emoji;
   else if(cur.locais[0] && cur.locais[0].emoji) p.emoji = cur.locais[0].emoji;
   if(cur.nome) p.nome = cur.nome;
