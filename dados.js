@@ -232,19 +232,6 @@ const destaques = [
     atividades:"Trilhas, caminhada, ciclismo e contato com a natureza.",
     curiosidade:"É referência em preservação de mata em área urbana."
   },
-  {
-    regiao:"Cianorte", cidade:"Cianorte",
-    nome:"Turismo de Compras (Moda)",
-    emoji:"👗", cor:"linear-gradient(135deg,#6a2c70,#a24aa6)",
-    imagem:"imagens/cianorte-moda.jpg", mapa:"Shopping de malhas Cianorte, Paraná",
-    subtitulo:"Polo da moda, com fábricas e shoppings de atacado.",
-    local:"Cianorte, microrregião própria no noroeste",
-    epoca:"O ano todo; movimenta ainda mais em feiras e liquidações.",
-    historia:"Cidade que virou grande polo de confecção e vendas de roupas, atraindo compradores de todo o país.",
-    surgimento:"O forte setor de confecção transformou o comércio em atração turística.",
-    atividades:"Compras em atacado, feiras de moda e passeios pela cidade.",
-    curiosidade:"Muitas excursões vão a Cianorte só para comprar roupas."
-  },
 
   /* ===== CAMPO MOURÃO ===== */
   {
@@ -433,8 +420,8 @@ const REMOVER = new Set([
   // Maringá (cidades muito pequenas, sem atração específica — confira se quiser)
   "Ângulo","Atalaia","Cambira","Floraí","Floresta","Flórida","Iguaraçu",
   "Itambé","Ivatuba","Lobato","Ourizona",
-  // removida a pedido
-  "Uniflor"
+  // removidas a pedido
+  "Uniflor","Indianópolis"
 ]);
 
 const CURADORIA = {
@@ -531,23 +518,28 @@ const CURADORIA = {
     {nome:"Rio Ivaí", query:"Rio Ivaí, Tapira, PR"} ] },
 
   /* ---- CIANORTE ---- */
+  "Cianorte": { nome:"Pontos de Cianorte", locais:[
+    {nome:"Parque Cinturão Verde", link:"https://maps.app.goo.gl/TeRR1oDUcqoLkvW39"},
+    {nome:"Parque Mandhuy (Faustino Celestino)", link:"https://maps.app.goo.gl/2ymSSeQHnquH3Khq7"},
+    {nome:"Bosque da Matriz", link:"https://maps.app.goo.gl/WBAWJt7NuoULNTmg9"},
+    {nome:"Praça Francisco Kano", link:"https://maps.app.goo.gl/WvnFGDERtWNwHPKx9"},
+    {nome:"Pesque e Pague do César", link:"https://maps.app.goo.gl/ZPeBW12sKajHhknv5"} ] },
   "Cidade Gaúcha": { emoji:"🌳", locais:[
-    {nome:"Bosque do Leão", query:"Bosque do Leão, Cidade Gaúcha, PR"},
-    {nome:"Igreja Matriz", query:"Paróquia Santa Maria Goretti, Cidade Gaúcha, PR"} ] },
+    {nome:"Bosque do Leão", link:"https://maps.app.goo.gl/rzzfNjmAL7VaHkB29"},
+    {nome:"Cachoeira do Miquilim", link:"https://maps.app.goo.gl/zCG8ibp2pHKxsvmz5"} ] },
   "Guaporema": { emoji:"⛪", credito:"Leandro Manso", locais:[
     {nome:"Paróquia São José", link:"https://maps.app.goo.gl/ih2JxLuBxD7G59Sa7"} ] },
   "Indianópolis": { emoji:"💧", locais:[
     {nome:"Cachoeira dos Índios", query:"Cachoeira dos Índios, Indianópolis, PR"},
     {nome:"Praça Central", query:"Praça Central, Indianópolis, PR"} ] },
-  "Japurá": { emoji:"💧", locais:[
-    {nome:"Cachoeira do Rio Ligeiro", query:"Cachoeira do Rio Ligeiro, Japurá, PR"},
-    {nome:"Igreja Santo Antônio", query:"Igreja Santo Antônio, Japurá, PR"} ] },
-  "Jussara": { emoji:"⛪", locais:[
-    {nome:"Igreja Matriz São Sebastião", query:"Igreja Matriz São Sebastião, Jussara, PR"},
-    {nome:"Mercado Municipal", query:"Mercado Municipal, Jussara, PR"} ] },
+  "Japurá": { emoji:"⛪", locais:[
+    {nome:"Paróquia São Sebastião", link:"https://maps.app.goo.gl/1vAtEhGKhmst7un4A"} ] },
+  "Jussara": { emoji:"💧", locais:[
+    {nome:"Cachoeira do Gelo", link:"https://maps.app.goo.gl/26iXgHMM1GiPdGZE6"} ] },
   "Rondon": { emoji:"💧", locais:[
-    {nome:"Cachoeira Miquelin", query:"Cachoeira Miquelin, Rondon, PR"},
-    {nome:"Reserva Caraguatatuba", query:"Reserva Ecológica Caraguatatuba, Rondon, PR"} ] },
+    {nome:"Parque Urbano Vale Verde", link:"https://maps.app.goo.gl/sCkGMUX2HLaN5Raw7"},
+    {nome:"Praça dos Pioneiros", link:"https://maps.app.goo.gl/ctFgjTmtf3o8rag36"},
+    {nome:"Cachoeira Usina Velha", link:"https://maps.app.goo.gl/b9hFs56RhGUTHKQG9"} ] },
   "São Manoel do Paraná": { emoji:"🌳", credito:"Henrique Barbosa", locais:[
     {nome:"Reserva Caraguatatiba da Divisa", query:"Reserva Ecológica Caraguatatiba da Divisa, São Manoel do Paraná, PR"} ] },
   "São Tomé": { emoji:"🌳", locais:[
