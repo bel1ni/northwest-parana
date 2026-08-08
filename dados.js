@@ -423,6 +423,7 @@ const REMOVER = new Set([
   "Amaporã","Inajá","Mirador","Nova Aliança do Ivaí","Paranapoema",
   "Planaltina do Paraná","Querência do Norte","Santa Cruz de Monte Castelo",
   "Santa Mônica","Santo Antônio do Caiuá",
+  "São Carlos do Ivaí","São João do Caiuá","São Pedro do Paraná","Tamboara",
   // Umuarama (nada turístico específico encontrado — confira se quiser)
   "Esperança Nova","Maria Helena","Perobal","Xambrê","Alto Piquiri",
   // Campo Mourão (nada turístico específico encontrado — confira se quiser)
@@ -465,8 +466,10 @@ const CURADORIA = {
   "Tamboara": { emoji:"⛲", locais:[
     {nome:"Praça Isabel Marcos Beltrame", query:"Praça Isabel Marcos Beltrame, Tamboara, PR"} ] },
   "Terra Rica": { nome:"Terra Rica — Capital do Voo Livre", emoji:"🪂", locais:[
-    {nome:"Parque dos Três Morrinhos", query:"Parque Municipal dos Três Morrinhos, Terra Rica, PR"},
-    {nome:"Prainha Municipal", query:"Prainha Municipal de Terra Rica, PR"} ] },
+    {nome:"Parque de Exposições", link:"https://maps.app.goo.gl/K5J7GYdhycKHhG4Y7"},
+    {nome:"Caverna do Sol Nascente (Toca do Índio)", link:"https://maps.app.goo.gl/SMFopZPhCdsWvALP9"},
+    {nome:"Lagoa do Juca", link:"https://maps.app.goo.gl/fQZGJxqmuU8niv2j7"},
+    {nome:"Zanato's Colônia", link:"https://maps.app.goo.gl/YtJzKcuqHLeCBbbV9"} ] },
 
   /* ---- UMUARAMA ---- */
   "Altônia": { emoji:"🏖️", locais:[
