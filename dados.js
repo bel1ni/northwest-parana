@@ -436,8 +436,8 @@ const REMOVER = new Set([
 
 const CURADORIA = {
   /* ---- PARANAVAÍ ---- */
-  "Alto Paraná": { emoji:"⛪", locais:[
-    {nome:"Santuário Santo Antônio de Pádua", link:"https://maps.app.goo.gl/9eqmTFS2Ucawwxpy7"} ] },
+  "Alto Paraná": { emoji:"⛪", credito:"Gabriel Brun da Silva", locais:[
+    {nome:"Santuário de Santo Antônio", link:"https://maps.app.goo.gl/9eqmTFS2Ucawwxpy7"} ] },
   "Cruzeiro do Sul": { emoji:"🌳", locais:[
     {nome:"Parque Ecológico dos Pioneiros", link:"https://maps.app.goo.gl/q9yHxfCMGr7FbmXZ6"} ] },
   "Diamante do Norte": { emoji:"🌳", locais:[
