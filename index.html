@@ -278,7 +278,7 @@
     const slidesEl=[...trilho.children];
 
     /* ---- FILTROS ---- */
-    const regioes=["Todos",...new Set(pontos.map(p=>p.regiao))];
+    const regioes=["Todos",...ordemRegiao.filter(r=>pontos.some(p=>p.regiao===r))];
     regioes.forEach((r,i)=>{
       const cor=CORES[r]||"#8ff0c0";
       const qtd=r==="Todos"?pontos.length:pontos.filter(p=>p.regiao===r).length;

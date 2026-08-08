@@ -644,9 +644,19 @@ function aplicarCuradoria(p){
   return p;
 }
 
-/* ---------- monta a lista final, ordenada por microrregião ---------- */
+/* ---------- ordem fixa das microrregiões (usada só nos filtros) ---------- */
 const ordemRegiao = ["Maringá","Paranavaí","Umuarama","Cianorte","Campo Mourão"];
-const pontos = [...destaques, ...genericas.map(expandir)]
-  .filter(p => !REMOVER.has(p.cidade))
-  .map(aplicarCuradoria)
-  .sort((a,b) => ordemRegiao.indexOf(a.regiao) - ordemRegiao.indexOf(b.regiao));
+
+/* embaralha (Fisher-Yates): as cidades aparecem em ordem ALEATÓRIA a cada visita */
+function embaralhar(arr){
+  for(let i = arr.length - 1; i > 0; i--){
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr;
+}
+const pontos = embaralhar(
+  [...destaques, ...genericas.map(expandir)]
+    .filter(p => !REMOVER.has(p.cidade))
+    .map(aplicarCuradoria)
+);
