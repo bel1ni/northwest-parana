@@ -93,15 +93,17 @@
   .progresso.rodando{animation:carregar 9s linear forwards}
   @keyframes carregar{from{width:0}to{width:100%}}
   .trilho{display:flex;align-items:stretch;transition:transform .6s cubic-bezier(.22,.61,.36,1)}
-  .slide{min-width:100%;position:relative;display:flex;flex-direction:column;justify-content:flex-end;min-height:340px}
-  .foto{position:absolute;inset:0;background-size:cover;background-position:center}
-  .foto::after{content:"";position:absolute;inset:0;
-    background:linear-gradient(180deg,rgba(0,0,0,.1) 0%,rgba(0,0,0,.32) 40%,rgba(6,14,11,.92) 100%)}
+  .slide{min-width:100%;position:relative;display:flex;flex-direction:column;background:var(--card)}
+  /* foto: faixa no TOPO do card (altura fixa), não cobre o conteúdo */
+  .foto{position:relative;width:100%;height:clamp(200px,40vh,380px);flex:none;overflow:hidden;
+    background-size:cover;background-position:center;background-color:#0a1712}
+  .foto::after{content:"";position:absolute;left:0;right:0;bottom:0;height:42%;
+    background:linear-gradient(180deg,transparent,var(--card))}
   .emoji-fundo{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
-    font-size:clamp(6rem,22vw,15rem);opacity:.18;filter:saturate(.35)}
+    font-size:clamp(5rem,16vw,11rem);opacity:.22;filter:saturate(.4)}
   .acento{position:absolute;top:0;left:0;right:0;height:5px;z-index:3}
 
-  .conteudo{position:relative;width:100%;padding:clamp(22px,4vw,44px);z-index:2}
+  .conteudo{position:relative;width:100%;padding:clamp(20px,3.5vw,40px);z-index:2}
   .slide.ativo .conteudo>*{animation:entra .55s cubic-bezier(.22,.61,.36,1) both}
   .slide.ativo .conteudo>*:nth-child(2){animation-delay:.05s}
   .slide.ativo .conteudo>*:nth-child(3){animation-delay:.10s}
@@ -254,8 +256,7 @@
       const s=document.createElement('div');
       s.className='slide';
       s.innerHTML=`
-        <div class="foto" style="background-image:${p.cor}"></div>
-        <div class="emoji-fundo">${p.emoji}</div>
+        <div class="foto" style="background-image:${p.cor}"><div class="emoji-fundo">${p.emoji}</div></div>
         <div class="acento" style="background:linear-gradient(90deg,${cor},transparent)"></div>
         ${p.credito?`<div class="credito-foto">📷 Foto: ${p.credito}</div>`:""}
         <div class="conteudo">
