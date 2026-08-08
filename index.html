@@ -103,7 +103,7 @@
     font-size:clamp(5rem,16vw,11rem);opacity:.22;filter:saturate(.4)}
   .acento{position:absolute;top:0;left:0;right:0;height:5px;z-index:3}
 
-  .conteudo{position:relative;width:100%;padding:clamp(20px,3.5vw,40px);padding-bottom:50px;z-index:2}
+  .conteudo{position:relative;width:100%;padding:clamp(20px,3.5vw,40px);z-index:2}
   .slide.ativo .conteudo>*{animation:entra .55s cubic-bezier(.22,.61,.36,1) both}
   .slide.ativo .conteudo>*:nth-child(2){animation-delay:.05s}
   .slide.ativo .conteudo>*:nth-child(3){animation-delay:.10s}
@@ -137,11 +137,11 @@
     border:1px solid rgba(255,255,255,.14)}
   .nav:hover{background:linear-gradient(120deg,var(--verde),var(--azul));transform:translateY(-50%) scale(1.08)}
   .nav.prev{left:16px}.nav.next{right:16px}
-  .pontos{position:absolute;bottom:14px;left:50%;transform:translateX(-50%);display:flex;gap:7px;z-index:5;
-    max-width:80%;flex-wrap:wrap;justify-content:center}
-  .ponto{width:9px;height:9px;border-radius:50%;border:none;cursor:pointer;background:rgba(255,255,255,.4);
+  .pontos{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;
+    width:min(1080px,100%);margin:16px auto 0}
+  .ponto{width:9px;height:9px;border-radius:50%;border:none;cursor:pointer;background:rgba(255,255,255,.35);
     transition:.25s;padding:0}
-  .ponto.ativo{background:#fff;width:26px;border-radius:6px}
+  .ponto.ativo{background:#8ff0c0;width:26px;border-radius:6px}
   .contador{position:absolute;top:16px;right:18px;z-index:5;color:#fff;background:rgba(6,14,11,.5);
     padding:6px 13px;border-radius:999px;font-size:.8rem;font-weight:800;backdrop-filter:blur(6px);
     border:1px solid rgba(255,255,255,.14)}
@@ -163,7 +163,7 @@
     .maps-btn{flex:1 1 100%;justify-content:center}
     .controles{position:static}
   }
-  @media (max-width:380px){ h2{font-size:1.3rem} .conteudo{padding:16px;padding-bottom:46px} }
+  @media (max-width:380px){ h2{font-size:1.3rem} .conteudo{padding:16px} }
   @media (prefers-reduced-motion:reduce){
     .trilho{transition:none}.foto{transition:none;transform:none}
     .emblema{animation:none}.slide.ativo .conteudo>*{animation:none}
@@ -203,8 +203,8 @@
     <button class="nav prev" id="prev" aria-label="Anterior">‹</button>
     <button class="nav next" id="next" aria-label="Próximo">›</button>
     <div class="contador" id="contador"></div>
-    <div class="pontos" id="pontos"></div>
   </div>
+  <div class="pontos" id="pontos"></div>
 
   <footer>
     <span class="marca">Northwest Paraná</span> · Guia Turístico do Noroeste · projeto em desenvolvimento<br>
