@@ -521,7 +521,7 @@ const CURADORIA = {
   "Rondon": { emoji:"💧", locais:[
     {nome:"Cachoeira Miquelin", query:"Cachoeira Miquelin, Rondon, PR"},
     {nome:"Reserva Caraguatatuba", query:"Reserva Ecológica Caraguatatuba, Rondon, PR"} ] },
-  "São Manoel do Paraná": { emoji:"🌳", locais:[
+  "São Manoel do Paraná": { emoji:"🌳", credito:"Henrique Barbosa", locais:[
     {nome:"Reserva Caraguatatiba da Divisa", query:"Reserva Ecológica Caraguatatiba da Divisa, São Manoel do Paraná, PR"} ] },
   "São Tomé": { emoji:"🌳", locais:[
     {nome:"Parque Ecológico", query:"Parque Ecológico de São Tomé, PR"},
