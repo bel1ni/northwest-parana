@@ -637,9 +637,10 @@ const CURADORIA = {
     {nome:"Praça dos Pioneiros", query:"Praça dos Pioneiros, Sarandi, PR"} ] },
   "Santa Fé": { emoji:"⛲", locais:[
     {nome:"Praça Central (Centro Histórico)", query:"Praça Central, Santa Fé, PR"} ] },
-  "São Jorge do Ivaí": { emoji:"🦕", locais:[
-    {nome:"Praça do Dinossauro", query:"Praça do Dinossauro, São Jorge do Ivaí, PR"},
-    {nome:"Praça Santa Cruz", query:"Praça Santa Cruz, São Jorge do Ivaí, PR"} ] },
+  "São Jorge do Ivaí": { emoji:"🦕", credito:"via Google Maps", locais:[
+    {nome:"Park dos Dinossauros", link:"https://maps.app.goo.gl/QneB2LZFcf335Fff6"},
+    {nome:"Parque Ambiental do Ribeirão Itamaraty", link:"https://maps.app.goo.gl/UVqu73xBoCFHeqLm6"},
+    {nome:"Paróquia São Jorge", link:"https://maps.app.goo.gl/QoDRfaYAvn8EAdMZ8"} ] },
   "Uniflor": { emoji:"🌻", locais:[
     {nome:"Campos de Flores", query:"Uniflor, Paraná"},
     {nome:"Praça Pedro Arnaut Toledo", query:"Praça Pedro Arnaut Toledo, Uniflor, PR"} ] },
