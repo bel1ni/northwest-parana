@@ -426,6 +426,7 @@ const REMOVER = new Set([
   "São Carlos do Ivaí","São João do Caiuá","São Pedro do Paraná","Tamboara",
   // Umuarama (nada turístico específico encontrado — confira se quiser)
   "Esperança Nova","Maria Helena","Perobal","Xambrê","Alto Piquiri",
+  "Alto Paraíso","Cafezal do Sul","Francisco Alves",
   // Campo Mourão (nada turístico específico encontrado — confira se quiser)
   "Farol","Quarto Centenário",
   // Maringá (cidades muito pequenas, sem atração específica — confira se quiser)
@@ -473,17 +474,21 @@ const CURADORIA = {
 
   /* ---- UMUARAMA ---- */
   "Altônia": { emoji:"🏖️", locais:[
-    {nome:"Balneário Vila Yara", query:"Balneário Vila Yara, Altônia, PR"},
-    {nome:"Lagoa Xambrê", query:"Lagoa Xambrê, Altônia, PR"} ] },
+    {nome:"Prainha da Lagoa Xambrê", link:"https://maps.app.goo.gl/YLh9hVVu9pQURvZ6A"},
+    {nome:"Pesqueiro Brejo Encantado", link:"https://maps.app.goo.gl/JoLqKppgmeknS8hS7"},
+    {nome:"Marina (Jardim Paredão)", link:"https://maps.app.goo.gl/qJPJNhHfjfPA37LV6"} ] },
+  "Cruzeiro do Oeste": { locais:[
+    {nome:"Dinossauros de CDO", link:"https://maps.app.goo.gl/WPdsar2nVcQaFyweA"},
+    {nome:"Museu de Paleontologia", link:"https://maps.app.goo.gl/H8KGft9KbnMQdbP69"},
+    {nome:"Parque Municipal", link:"https://maps.app.goo.gl/sV4wqn6P7UhorAXQ9"} ] },
   "Alto Piquiri": { emoji:"🏞️", locais:[
     {nome:"Complexo Bica", query:"Complexo Bica, Alto Piquiri, PR"},
     {nome:"Parque Municipal", query:"Parque Municipal, Alto Piquiri, PR"} ] },
   "Cafezal do Sul": { emoji:"🏖️", locais:[
     {nome:"Praia Artificial (Lago)", query:"Praia Artificial, Cafezal do Sul, PR"},
     {nome:"Parque Municipal", query:"Parque Municipal, Cafezal do Sul, PR"} ] },
-  "Douradina": { emoji:"🏛️", locais:[
-    {nome:"Museu Municipal", query:"Museu Municipal de Douradina, PR"},
-    {nome:"Parque Municipal", query:"Parque Municipal, Douradina, PR"} ] },
+  "Douradina": { emoji:"🎪", locais:[
+    {nome:"Arena Fepeina", link:"https://maps.app.goo.gl/sL9JbYsdsetvGUAd7"} ] },
   "Francisco Alves": { emoji:"🎸", locais:[
     {nome:"Portal de Francisco Alves", query:"Portal de Francisco Alves, PR"},
     {nome:"Parque Florestal Enio Pepino", query:"Parque Florestal Enio Pepino, Francisco Alves, PR"} ] },
