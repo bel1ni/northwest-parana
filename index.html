@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Northwest Paraná — Guia de Pontos Turísticos do Noroeste</title>
+<style>
+  :root{
+    --verde:#0a8f4f; --verde-esc:#075c34; --azul:#1157a0; --azul-esc:#0a3a6e;
+    --bg:#07130f; --card:#0e1c17; --linha:rgba(255,255,255,.10);
+    --texto:#eaf6f0; --suave:#a9c4b8; --dim:#7c9a8e;
+    --fonte:'Segoe UI',system-ui,-apple-system,Roboto,Arial,sans-serif;
+    --raio:20px; --sombra:0 24px 60px rgba(0,0,0,.45);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:var(--fonte);color:var(--texto);
+    background:
+      radial-gradient(1200px 600px at 84% -12%, rgba(17,87,160,.30), transparent 60%),
+      radial-gradient(1100px 560px at -8% 106%, rgba(10,143,79,.32), transparent 58%),
+      var(--bg);
+    min-height:100vh;display:flex;flex-direction:column;align-items:center;
+    padding:26px 16px 70px;
+  }
+  ::selection{background:var(--verde);color:#fff}
+
+  /* ---------------- HERO ---------------- */
+  header{text-align:center;max-width:1000px;width:100%;margin-bottom:10px}
+  .emblema{
+    width:78px;height:78px;border-radius:50%;margin:0 auto 16px;position:relative;
+    background:linear-gradient(135deg,var(--verde) 0 50%,var(--azul) 50% 100%);
+    box-shadow:0 8px 26px rgba(0,0,0,.5),0 0 0 4px rgba(255,255,255,.92);
+    display:flex;align-items:center;justify-content:center;
+    animation:flutua 5s ease-in-out infinite;
+  }
+  @keyframes flutua{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+  .emblema::before{content:"";position:absolute;inset:0;border-radius:50%;
+    background:linear-gradient(135deg,transparent 0 44%,rgba(255,255,255,.95) 44% 56%,transparent 56% 100%)}
+  .emblema span{position:relative;z-index:2;font-size:1.6rem}
+  .kicker{display:inline-block;letter-spacing:.32em;text-transform:uppercase;font-size:.7rem;
+    font-weight:800;color:#8ff0c0;margin-bottom:12px}
+  h1{font-size:clamp(2rem,5vw,3.4rem);line-height:1.03;font-weight:800;letter-spacing:-.5px}
+  h1 .grad{background:linear-gradient(100deg,#7be2ff,#8ff0c0);-webkit-background-clip:text;
+    background-clip:text;color:transparent}
+  .sub{margin:14px auto 0;color:var(--suave);font-size:1.02rem;line-height:1.6;max-width:640px}
+  .faixa{height:7px;width:min(560px,90%);border-radius:99px;margin:20px auto 0;
+    background:linear-gradient(90deg,var(--verde) 0 40%,#fff 40% 60%,var(--azul) 60% 100%);
+    box-shadow:0 4px 14px rgba(0,0,0,.35)}
+  .logo{width:min(82%,340px);height:auto;display:block;margin:4px auto 2px;border-radius:22px;
+    box-shadow:0 20px 48px rgba(0,0,0,.5);animation:flutua 6s ease-in-out infinite}
+  .titulo{font-size:clamp(2rem,5vw,3.4rem);line-height:1.03;font-weight:800;letter-spacing:-.5px}
+  .slogan{margin-top:10px;letter-spacing:.26em;text-transform:uppercase;font-size:.72rem;
+    font-weight:800;color:#8ff0c0}
+  .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;
+    clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+  /* ---------------- STATS ---------------- */
+  .stats{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin:26px 0 6px}
+  .stat{background:var(--card);border:1px solid var(--linha);border-radius:16px;
+    padding:14px 22px;min-width:120px;text-align:center;backdrop-filter:blur(6px)}
+  .stat b{display:block;font-size:1.7rem;font-weight:800;
+    background:linear-gradient(120deg,#8ff0c0,#7be2ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .stat small{color:var(--dim);font-size:.74rem;text-transform:uppercase;letter-spacing:.12em;font-weight:700}
+
+  /* ---------------- CONTROLES ---------------- */
+  .controles{width:min(1080px,100%);margin:22px 0 4px;position:sticky;top:8px;z-index:20}
+  .busca{position:relative;margin:0 auto 12px;max-width:460px}
+  .busca input{width:100%;background:rgba(8,20,15,.9);border:1px solid var(--linha);color:var(--texto);
+    border-radius:99px;padding:13px 18px 13px 44px;font-size:.95rem;font-family:var(--fonte);
+    outline:none;transition:.2s;box-shadow:0 8px 24px rgba(0,0,0,.3);backdrop-filter:blur(8px)}
+  .busca input:focus{border-color:var(--verde);box-shadow:0 0 0 3px rgba(10,143,79,.25)}
+  .busca .lupa{position:absolute;left:16px;top:50%;transform:translateY(-50%);opacity:.6}
+  .busca .limpar{position:absolute;right:12px;top:50%;transform:translateY(-50%);cursor:pointer;
+    background:none;border:none;color:var(--dim);font-size:1.1rem;display:none}
+  .filtros{display:flex;gap:8px;flex-wrap:wrap;justify-content:center}
+  .chip{border:1px solid var(--linha);background:rgba(255,255,255,.06);color:var(--suave);
+    border-radius:99px;padding:8px 15px;cursor:pointer;font-weight:700;font-size:.83rem;
+    transition:.2s;font-family:var(--fonte);display:inline-flex;align-items:center;gap:7px}
+  .chip .bola{width:9px;height:9px;border-radius:50%;background:currentColor;opacity:.9}
+  .chip:hover{background:rgba(255,255,255,.13);color:#fff;transform:translateY(-1px)}
+  .chip.ativo{color:#fff;border-color:transparent}
+  .resultado{text-align:center;color:var(--dim);font-size:.8rem;margin-top:10px;min-height:1em}
+
+  /* ---------------- CARROSSEL ---------------- */
+  .carrossel{position:relative;width:min(1080px,100%);border-radius:var(--raio);overflow:hidden;
+    box-shadow:var(--sombra);background:#000;margin-top:14px;border:1px solid var(--linha)}
+  .progresso{position:absolute;top:0;left:0;height:4px;width:0;z-index:6;
+    background:linear-gradient(90deg,#8ff0c0,#7be2ff)}
+  .progresso.rodando{animation:carregar 9s linear forwards}
+  @keyframes carregar{from{width:0}to{width:100%}}
+  .trilho{display:flex;align-items:stretch;transition:transform .6s cubic-bezier(.22,.61,.36,1)}
+  .slide{min-width:100%;position:relative;display:flex;flex-direction:column;justify-content:flex-end;min-height:340px}
+  .foto{position:absolute;inset:0;background-size:cover;background-position:center}
+  .foto::after{content:"";position:absolute;inset:0;
+    background:linear-gradient(180deg,rgba(0,0,0,.1) 0%,rgba(0,0,0,.32) 40%,rgba(6,14,11,.92) 100%)}
+  .emoji-fundo{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+    font-size:clamp(6rem,22vw,15rem);opacity:.18;filter:saturate(.35)}
+  .acento{position:absolute;top:0;left:0;right:0;height:5px;z-index:3}
+
+  .conteudo{position:relative;width:100%;padding:clamp(22px,4vw,44px);z-index:2}
+  .slide.ativo .conteudo>*{animation:entra .55s cubic-bezier(.22,.61,.36,1) both}
+  .slide.ativo .conteudo>*:nth-child(2){animation-delay:.05s}
+  .slide.ativo .conteudo>*:nth-child(3){animation-delay:.10s}
+  .slide.ativo .conteudo>*:nth-child(4){animation-delay:.15s}
+  @keyframes entra{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+  .linha-topo{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:12px}
+  .cidade{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.14);
+    backdrop-filter:blur(6px);padding:6px 14px;border-radius:999px;font-size:.78rem;font-weight:800;
+    letter-spacing:.03em;border:1px solid rgba(255,255,255,.25)}
+  .badge{display:inline-flex;align-items:center;gap:6px;background:rgba(255,196,0,.16);
+    border:1px solid rgba(255,196,0,.5);color:#ffd85a;padding:5px 12px;border-radius:999px;
+    font-size:.7rem;font-weight:800}
+  h2{font-size:clamp(1.5rem,3.6vw,2.6rem);font-weight:800;line-height:1.05;margin-bottom:8px;letter-spacing:-.4px}
+  .subtitulo{color:#d5f0e4;font-size:1rem;margin-bottom:16px;max-width:760px;line-height:1.5}
+  .mapas{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:18px}
+  .maps-btn{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(120deg,var(--verde),var(--azul));
+    color:#fff;text-decoration:none;padding:11px 18px;border-radius:99px;font-weight:800;font-size:.88rem;
+    box-shadow:0 8px 20px rgba(0,0,0,.4);transition:.2s;border:1px solid rgba(255,255,255,.22)}
+  .maps-btn:hover{transform:translateY(-2px);filter:brightness(1.12)}
+  .infos{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;max-width:1000px}
+  .info{background:rgba(255,255,255,.09);border:1px solid var(--linha);border-radius:14px;
+    padding:12px 15px;backdrop-filter:blur(4px);transition:.2s}
+  .info:hover{background:rgba(255,255,255,.14);transform:translateY(-2px)}
+  .info .rot{display:flex;align-items:center;gap:7px;font-size:.68rem;text-transform:uppercase;
+    letter-spacing:.1em;color:#8ff0c0;font-weight:800;margin-bottom:5px}
+  .info p{font-size:.9rem;line-height:1.5;color:#eefbf5}
+
+  .nav{position:absolute;top:50%;transform:translateY(-50%);width:52px;height:52px;border-radius:50%;
+    border:none;cursor:pointer;background:rgba(6,14,11,.55);color:#fff;font-size:1.6rem;display:flex;
+    align-items:center;justify-content:center;z-index:5;transition:.2s;backdrop-filter:blur(6px);
+    border:1px solid rgba(255,255,255,.14)}
+  .nav:hover{background:linear-gradient(120deg,var(--verde),var(--azul));transform:translateY(-50%) scale(1.08)}
+  .nav.prev{left:16px}.nav.next{right:16px}
+  .pontos{position:absolute;bottom:14px;left:50%;transform:translateX(-50%);display:flex;gap:7px;z-index:5;
+    max-width:80%;flex-wrap:wrap;justify-content:center}
+  .ponto{width:9px;height:9px;border-radius:50%;border:none;cursor:pointer;background:rgba(255,255,255,.4);
+    transition:.25s;padding:0}
+  .ponto.ativo{background:#fff;width:26px;border-radius:6px}
+  .contador{position:absolute;top:16px;right:18px;z-index:5;color:#fff;background:rgba(6,14,11,.5);
+    padding:6px 13px;border-radius:999px;font-size:.8rem;font-weight:800;backdrop-filter:blur(6px);
+    border:1px solid rgba(255,255,255,.14)}
+  .vazio{padding:60px 20px;text-align:center;color:var(--dim);font-size:1.05rem}
+
+  footer{color:var(--dim);margin-top:34px;text-align:center;font-size:.82rem;line-height:1.8;max-width:820px}
+  footer strong{color:#8ff0c0}
+  footer .marca{color:var(--suave);font-weight:700}
+
+  @media (max-width:600px){
+    body{padding:18px 10px 46px}
+    .stat{padding:11px 16px;min-width:96px}
+    .stat b{font-size:1.35rem}
+    .nav{width:38px;height:38px;font-size:1.2rem}.nav.prev{left:8px}.nav.next{right:8px}
+    .infos{grid-template-columns:1fr;gap:9px}
+    .maps-btn{flex:1 1 100%;justify-content:center}
+    .controles{position:static}
+  }
+  @media (max-width:380px){ h2{font-size:1.3rem} .conteudo{padding:16px} }
+  @media (prefers-reduced-motion:reduce){
+    .trilho{transition:none}.foto{transition:none;transform:none}
+    .emblema{animation:none}.slide.ativo .conteudo>*{animation:none}
+    .progresso.rodando{animation:none}
+  }
+</style>
+</head>
+<body>
+
+  <header>
+    <img id="logo" class="logo" src="imagens/logo.png" alt="Northwest Paraná — Descubra, Conheça, Viva"
+         onerror="this.style.display='none';document.getElementById('brandText').style.display='block';">
+    <h1 class="sr-only">Northwest Paraná — Pontos Turísticos do Noroeste do Paraná</h1>
+    <div id="brandText" style="display:none">
+      <div class="emblema"><span>🌲</span></div>
+      <div class="kicker">Encontro das Águas e Biomas</div>
+      <div class="titulo">Northwest <span class="grad">Paraná</span></div>
+      <div class="slogan">Descubra • Conheça • Viva</div>
+    </div>
+    <p class="sub">Um guia visual das belezas naturais, históricas e culturais do <strong style="color:#8ff0c0">Noroeste do Paraná</strong> — das torres de Maringá às praias de água doce do Rio Paraná. Toque em <strong style="color:#8ff0c0">Ver no Google Maps</strong> para chegar a cada lugar.</p>
+    <div class="faixa"></div>
+    <div class="stats" id="stats"></div>
+  </header>
+
+  <div class="controles">
+    <div class="busca">
+      <span class="lupa">🔍</span>
+      <input id="busca" type="search" placeholder="Buscar cidade ou ponto turístico..." aria-label="Buscar">
+      <button class="limpar" id="limpar" aria-label="Limpar">✕</button>
+    </div>
+    <div class="filtros" id="filtros"></div>
+    <div class="resultado" id="resultado"></div>
+  </div>
+
+  <div class="carrossel" id="carrossel">
+    <div class="trilho" id="trilho"></div>
+    <button class="nav prev" id="prev" aria-label="Anterior">‹</button>
+    <button class="nav next" id="next" aria-label="Próximo">›</button>
+    <div class="contador" id="contador"></div>
+    <div class="pontos" id="pontos"></div>
+  </div>
+
+  <footer>
+    <span class="marca">Northwest Paraná</span> · Guia Turístico do Noroeste · projeto em desenvolvimento<br>
+    Use <strong>← →</strong> do teclado · a passagem automática pausa ao interagir.<br>
+    Cards com <strong>✏️ Para completar</strong> são um ponto de partida — complete os detalhes na pesquisa.<br>
+    ⚠️ Confira datas e informações em fontes oficiais antes de usar.
+  </footer>
+
+  <script src="dados.js"></script>
+  <script>
+    const CORES = {
+      "Maringá":"#0a8f4f", "Paranavaí":"#0f9e8e", "Umuarama":"#d98324",
+      "Cianorte":"#8a5fb0", "Campo Mourão":"#1f7fc0"
+    };
+    const norm = s => (s||"").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g,"");
+
+    const trilho=document.getElementById('trilho'), pontosNav=document.getElementById('pontos'),
+      filtrosEl=document.getElementById('filtros'), contador=document.getElementById('contador'),
+      carrossel=document.getElementById('carrossel'), busca=document.getElementById('busca'),
+      limpar=document.getElementById('limpar'), resultado=document.getElementById('resultado');
+
+    let visiveis=[], pos=0, regiaoAtual="Todos", termo="";
+
+    /* ---- STATS ---- */
+    (function(){
+      const cidades=new Set(pontos.map(p=>p.cidade)).size;
+      const totalPontos=pontos.reduce((a,p)=>a+(p.locais?p.locais.length:1),0);
+      const regs=new Set(pontos.map(p=>p.regiao)).size;
+      document.getElementById('stats').innerHTML=
+        `<div class="stat"><b>${cidades}</b><small>Cidades</small></div>
+         <div class="stat"><b>${totalPontos}</b><small>Pontos turísticos</small></div>
+         <div class="stat"><b>${regs}</b><small>Microrregiões</small></div>`;
+    })();
+
+    /* ---- SLIDES ---- */
+    pontos.forEach(p=>{
+      const cor=CORES[p.regiao]||"var(--verde)";
+      let botoes;
+      if(p.locais&&p.locais.length){
+        botoes=p.locais.map(l=>{
+          const href=l.link?l.link:"https://www.google.com/maps/search/?api=1&query="+encodeURIComponent(l.query);
+          return `<a class="maps-btn" href="${href}" target="_blank" rel="noopener">🗺️ ${l.nome}</a>`;
+        }).join("");
+      }else{
+        const u="https://www.google.com/maps/search/?api=1&query="+encodeURIComponent(p.mapa);
+        botoes=`<a class="maps-btn" href="${u}" target="_blank" rel="noopener">🗺️ Ver no Google Maps</a>`;
+      }
+      const badge=p.pesquisar?`<span class="badge">✏️ Para completar</span>`:"";
+      const s=document.createElement('div');
+      s.className='slide';
+      s.innerHTML=`
+        <div class="foto" style="background-image:${p.cor}"></div>
+        <div class="emoji-fundo">${p.emoji}</div>
+        <div class="acento" style="background:linear-gradient(90deg,${cor},transparent)"></div>
+        <div class="conteudo">
+          <div class="linha-topo">
+            <span class="cidade" style="border-color:${cor}66"><span style="color:${cor}">●</span> ${p.cidade} · ${p.regiao}</span>${badge}
+          </div>
+          <h2>${p.nome}</h2>
+          <p class="subtitulo">${p.subtitulo}</p>
+          <div class="mapas">${botoes}</div>
+          <div class="infos">
+            <div class="info"><div class="rot">📌 Local</div><p>${p.local}</p></div>
+            <div class="info"><div class="rot">📅 Melhor época</div><p>${p.epoca}</p></div>
+            <div class="info"><div class="rot">📖 História</div><p>${p.historia}</p></div>
+            <div class="info"><div class="rot">🌱 Surgimento</div><p>${p.surgimento}</p></div>
+            <div class="info"><div class="rot">🎯 O que fazer</div><p>${p.atividades}</p></div>
+            <div class="info"><div class="rot">✨ Curiosidade</div><p>${p.curiosidade}</p></div>
+          </div>
+        </div>`;
+      trilho.appendChild(s);
+      const foto=s.querySelector('.foto'), t=new Image();
+      t.onload=()=>{foto.style.backgroundImage=`url('${p.imagem}')`;s.querySelector('.emoji-fundo').style.display='none';};
+      t.src=p.imagem;
+    });
+    const slidesEl=[...trilho.children];
+
+    /* ---- FILTROS ---- */
+    const regioes=["Todos",...new Set(pontos.map(p=>p.regiao))];
+    regioes.forEach((r,i)=>{
+      const cor=CORES[r]||"#8ff0c0";
+      const qtd=r==="Todos"?pontos.length:pontos.filter(p=>p.regiao===r).length;
+      const c=document.createElement('button');
+      c.className='chip'+(i===0?' ativo':'');
+      c.style.color=r==="Todos"?"#8ff0c0":cor;
+      c.innerHTML=`<span class="bola"></span>${r} <span style="opacity:.7">${qtd}</span>`;
+      if(i===0){c.style.background="linear-gradient(120deg,var(--verde),var(--azul))";c.style.color="#fff";}
+      c.addEventListener('click',()=>{ regiaoAtual=r; document.querySelectorAll('.chip').forEach(x=>{
+        x.classList.remove('ativo');x.style.background="";x.style.color=(x.dataset.reg==="Todos")?"#8ff0c0":(CORES[x.dataset.reg]||"#8ff0c0");});
+        c.classList.add('ativo'); c.style.background=r==="Todos"?"linear-gradient(120deg,var(--verde),var(--azul))":cor; c.style.color="#fff";
+        filtrar(); });
+      c.dataset.reg=r;
+      filtrosEl.appendChild(c);
+    });
+
+    /* ---- BUSCA ---- */
+    busca.addEventListener('input',()=>{ termo=norm(busca.value.trim()); limpar.style.display=busca.value?'block':'none'; filtrar(); });
+    limpar.addEventListener('click',()=>{ busca.value="";termo="";limpar.style.display='none';filtrar();busca.focus(); });
+
+    function filtrar(){
+      visiveis=pontos.map((p,i)=>i).filter(i=>{
+        const p=pontos[i];
+        const okReg = regiaoAtual==="Todos"||p.regiao===regiaoAtual;
+        const alvo = norm(p.cidade+" "+p.nome+" "+(p.locais?p.locais.map(l=>l.nome).join(" "):""));
+        const okBusca = !termo||alvo.includes(termo);
+        return okReg&&okBusca;
+      });
+      pos=0; montarNav(); atualizar();
+      resultado.textContent = visiveis.length
+        ? `${visiveis.length} ${visiveis.length===1?'resultado':'resultados'}`+(termo?` para “${busca.value.trim()}”`:'')
+        : '';
+      reiniciarAuto();
+    }
+
+    function montarNav(){
+      pontosNav.innerHTML="";
+      if(visiveis.length>1 && visiveis.length<=16){
+        pontosNav.style.display="flex";
+        visiveis.forEach((_,k)=>{
+          const b=document.createElement('button');
+          b.className='ponto'+(k===pos?' ativo':'');
+          b.addEventListener('click',()=>{pos=k;atualizar();reiniciarAuto();});
+          pontosNav.appendChild(b);
+        });
+      }else pontosNav.style.display="none";
+    }
+
+    function atualizar(){
+      if(!visiveis.length){
+        trilho.style.transform="translateX(0)";
+        slidesEl.forEach(s=>s.classList.remove('ativo'));
+        contador.textContent="0 / 0";
+        if(!document.querySelector('.vazio')){
+          const v=document.createElement('div');v.className='vazio';v.id='vazioMsg';
+          v.textContent="Nenhum ponto encontrado. Tente outra busca ou região.";
+          carrossel.appendChild(v);
+        }
+        return;
+      }
+      const vm=document.getElementById('vazioMsg'); if(vm) vm.remove();
+      const idx=visiveis[pos];
+      trilho.style.transform=`translateX(-${idx*100}%)`;
+      slidesEl.forEach((s,i)=>s.classList.toggle('ativo',i===idx));
+      [...pontosNav.children].forEach((b,k)=>b.classList.toggle('ativo',k===pos));
+      contador.textContent=`${pos+1} / ${visiveis.length}`;
+    }
+    function proximo(){ if(!visiveis.length)return; pos=(pos+1)%visiveis.length; atualizar(); }
+    function irNext(){ proximo(); }
+    function anterior(){ if(!visiveis.length)return; pos=(pos-1+visiveis.length)%visiveis.length; atualizar(); }
+
+    document.getElementById('next').addEventListener('click',irNext);
+    document.getElementById('prev').addEventListener('click',anterior);
+    document.addEventListener('keydown',e=>{
+      if(document.activeElement===busca)return;
+      if(e.key==='ArrowRight')irNext(); if(e.key==='ArrowLeft')anterior();
+    });
+
+    /* ---- sem passagem automática: navegação só manual ---- */
+    function reiniciarAuto(){}
+
+    /* ---- SWIPE (arrastar no celular) ---- */
+    let x0=null;
+    carrossel.addEventListener('touchstart',e=>{x0=e.touches[0].clientX;},{passive:true});
+    carrossel.addEventListener('touchend',e=>{ if(x0===null)return;
+      const dx=e.changedTouches[0].clientX-x0;
+      if(dx<-45)irNext(); if(dx>45)anterior(); x0=null; },{passive:true});
+
+    /* ---- INÍCIO ---- */
+    visiveis=pontos.map((p,i)=>i);
+    montarNav(); atualizar();
+  </script>
+</body>
+</html>

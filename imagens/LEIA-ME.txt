@@ -1,0 +1,55 @@
+COMO COLOCAR AS FOTOS DOS LOCAIS NO SITE
+=========================================
+
+O site já funciona sem fotos: cada ponto aparece com um fundo colorido
+e um emoji. Com fotos reais fica MUITO mais bonito.
+
+REGRA DO NOME DO ARQUIVO
+------------------------
+A foto de cada cidade deve ter o nome da cidade, TUDO minúsculo, SEM
+acento e trocando espaços por hífen (-). Exemplos:
+
+   Santa Isabel do Ivaí   ->  santa-isabel-do-ivai.jpg
+   São Jorge do Patrocínio ->  sao-jorge-do-patrocinio.jpg
+   Goioerê                ->  goioere.jpg
+   Ângulo                 ->  angulo.jpg
+   Rancho Alegre d'Oeste  ->  rancho-alegre-doeste.jpg
+
+Salve o arquivo .jpg dentro desta pasta "imagens" e abra o index.html:
+a foto aparece sozinha no lugar do fundo colorido.
+
+LOGO DO SITE (Northwest Paraná):
+   logo.png  -> a logomarca que aparece no topo do site.
+   Salve a imagem da logo nesta pasta "imagens" com o nome logo.png.
+   Enquanto não houver o arquivo, o site mostra a versão em texto.
+
+CIDADES COM MAIS DE UMA ATRAÇÃO (nomes especiais):
+   catedral-maringa.jpg      -> Catedral de Maringá
+   parque-inga.jpg           -> Parque do Ingá (Maringá)
+   parque-japao.jpg          -> Parque do Japão (Maringá)
+   bosque-pioneiros.jpg      -> Bosque dos Pioneiros (Maringá)
+   cianorte.jpg              -> Parque Cinturão Verde (Cianorte)
+   cianorte-moda.jpg         -> Turismo de Compras (Cianorte)
+
+DICAS
+-----
+- Prefira fotos horizontais, largas, com no mínimo 1200 px de largura.
+- Sites de fotos livres: Wikimedia Commons, Unsplash, Pixabay.
+  Cite a fonte da imagem no trabalho.
+- Se a foto não aparecer, confira se o NOME está EXATAMENTE na regra
+  acima (minúsculo, sem acento, hífen no lugar de espaço).
+
+SOBRE O SELO "✏️ Para completar"
+--------------------------------
+As cidades menores aparecem com um ponto de partida (igreja matriz /
+praça, ou beira-rio) porque não há informação turística confiável e
+específica para todas elas. Complete a história, a curiosidade e a
+melhor época na SUA pesquisa. Todos os textos ficam no arquivo
+"dados.js" e podem ser editados no Bloco de Notas.
+
+COMO MELHORAR UMA CIDADE
+------------------------
+1. Abra o arquivo dados.js.
+2. Ache a cidade na lista "genericas" (ex.: {c:"Loanda", r:"Paranavaí"}).
+3. Para dar detalhes, mova-a para a lista "destaques" copiando um bloco
+   completo { ... } e preenchendo os campos (nome, historia, etc.).
