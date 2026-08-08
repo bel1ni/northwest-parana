@@ -427,6 +427,7 @@ const REMOVER = new Set([
   // Umuarama (nada turístico específico encontrado — confira se quiser)
   "Esperança Nova","Maria Helena","Perobal","Xambrê","Alto Piquiri",
   "Alto Paraíso","Cafezal do Sul","Francisco Alves",
+  "Ivaté","Mariluz","Tapira",
   // Campo Mourão (nada turístico específico encontrado — confira se quiser)
   "Farol","Quarto Centenário",
   // Maringá (cidades muito pequenas, sem atração específica — confira se quiser)
@@ -480,7 +481,26 @@ const CURADORIA = {
   "Cruzeiro do Oeste": { locais:[
     {nome:"Dinossauros de CDO", link:"https://maps.app.goo.gl/WPdsar2nVcQaFyweA"},
     {nome:"Museu de Paleontologia", link:"https://maps.app.goo.gl/H8KGft9KbnMQdbP69"},
-    {nome:"Parque Municipal", link:"https://maps.app.goo.gl/sV4wqn6P7UhorAXQ9"} ] },
+    {nome:"Parque Municipal", link:"https://maps.app.goo.gl/sV4wqn6P7UhorAXQ9"},
+    {nome:"Espaço Torres Lazer e Aventura", link:"https://maps.app.goo.gl/4tAv4H47U44vyGuS8"} ] },
+  "Icaraíma": { locais:[
+    {nome:"Balneário Porto Camargo", query:"Porto Camargo, Icaraíma, PR"},
+    {nome:"Cachoeira com prainha", link:"https://maps.app.goo.gl/HZSfTR7xS8fuRJ2g9"},
+    {nome:"Centro SIRI de Eventos", link:"https://maps.app.goo.gl/PXzh5FzWhcQVvaXc9"} ] },
+  "São Jorge do Patrocínio": { locais:[
+    {nome:"Prainha do Paracaí", link:"https://maps.app.goo.gl/XFxDESvw5dsPhg7b8"},
+    {nome:"Recanto Alvorada", link:"https://maps.app.goo.gl/2umpKMraPWmzU4S39"} ] },
+  "Umuarama": { nome:"Umuarama — principais pontos", locais:[
+    {nome:"Lago Aratimbó", link:"https://maps.app.goo.gl/yWQD1WGWpb2cMLn38"},
+    {nome:"Torre Eiffel de Umuarama", link:"https://maps.app.goo.gl/PWhy7T7nHqvGfMJB9"},
+    {nome:"Parque de Exposições", link:"https://maps.app.goo.gl/YkAKPQaXtkVewDXFA"},
+    {nome:"Praça JK / do Japão", link:"https://maps.app.goo.gl/NsccBkmm6pGhhfJs8"},
+    {nome:"Praça Santos Dumont", link:"https://maps.app.goo.gl/j4BTZ3L5h2qfX71n9"},
+    {nome:"Bosque Uirapuru", link:"https://maps.app.goo.gl/zpoXK2vnBFimvkRV7"},
+    {nome:"Bosque dos Xetás (Do Índio)", link:"https://maps.app.goo.gl/eyqJoaRcJgo37Gd47"},
+    {nome:"Cachoeira do Ventão", link:"https://maps.app.goo.gl/eEhe9P4ME6DFBaQ9A"},
+    {nome:"Shopping Palladium", link:"https://maps.app.goo.gl/tYtPixBKHt9RmHot5"},
+    {nome:"Cachoeira do Tarumã", link:"https://maps.app.goo.gl/yrM9bSBnQFxBhf358"} ] },
   "Alto Piquiri": { emoji:"🏞️", locais:[
     {nome:"Complexo Bica", query:"Complexo Bica, Alto Piquiri, PR"},
     {nome:"Parque Municipal", query:"Parque Municipal, Alto Piquiri, PR"} ] },
@@ -493,8 +513,8 @@ const CURADORIA = {
     {nome:"Portal de Francisco Alves", query:"Portal de Francisco Alves, PR"},
     {nome:"Parque Florestal Enio Pepino", query:"Parque Florestal Enio Pepino, Francisco Alves, PR"} ] },
   "Iporã": { emoji:"🌳", locais:[
-    {nome:"Parque Municipal", query:"Parque Municipal de Iporã, PR"},
-    {nome:"Santuário N. Sra. das Brotas", query:"Santuário Nossa Senhora das Brotas, Iporã, PR"} ] },
+    {nome:"Praça das Nações Unidas", link:"https://maps.app.goo.gl/zY8MPQfLFLqGgHQC6"},
+    {nome:"Parque Primavera", link:"https://maps.app.goo.gl/kJ2kDkJinpc54cu3A"} ] },
   "Ivaté": { emoji:"🎣", locais:[
     {nome:"Balneário Rancho Arara Azul", query:"Balneário Rancho Arara Azul, Ivaté, PR"},
     {nome:"Rio Ivaí", query:"Rio Ivaí, Ivaté, PR"} ] },
@@ -502,11 +522,10 @@ const CURADORIA = {
     {nome:"Cachoeira São Luiz", query:"Cachoeira São Luiz, Mariluz, PR"},
     {nome:"Paróquia Santo Antônio", query:"Paróquia Santo Antônio, Mariluz, PR"} ] },
   "Nova Olímpia": { emoji:"🚣", locais:[
-    {nome:"Lago Municipal", query:"Lago Municipal de Nova Olímpia, PR"},
-    {nome:"Praça da República", query:"Praça da República, Nova Olímpia, PR"} ] },
-  "Pérola": { emoji:"🌊", locais:[
-    {nome:"Parque Lagoa Azul", query:"Parque Lagoa Azul, Pérola, PR"},
-    {nome:"Praça do Violão", query:"Praça Zequinha de Abreu, Pérola, PR"} ] },
+    {nome:"Lago Municipal", link:"https://maps.app.goo.gl/zqqEBCz32ASuuuHR9"} ] },
+  "Pérola": { emoji:"🎪", locais:[
+    {nome:"Expo Pérola (Festa do Peão)", link:"https://maps.app.goo.gl/d7H8NV3Woj4QFTpt5"},
+    {nome:"Praça Nelo Mazini", link:"https://maps.app.goo.gl/9bPLCyFSw5ZvbF5q7"} ] },
   "Tapira": { emoji:"🌳", locais:[
     {nome:"Bosque do Leão", query:"Bosque do Leão, Tapira, PR"},
     {nome:"Rio Ivaí", query:"Rio Ivaí, Tapira, PR"} ] },
