@@ -424,7 +424,7 @@ const REMOVER = new Set([
   "Planaltina do Paraná","Querência do Norte","Santa Cruz de Monte Castelo",
   "Santa Mônica","Santo Antônio do Caiuá",
   // Umuarama (nada turístico específico encontrado — confira se quiser)
-  "Esperança Nova","Maria Helena","Perobal","Xambrê",
+  "Esperança Nova","Maria Helena","Perobal","Xambrê","Alto Piquiri",
   // Campo Mourão (nada turístico específico encontrado — confira se quiser)
   "Farol","Quarto Centenário",
   // Maringá (cidades muito pequenas, sem atração específica — confira se quiser)
