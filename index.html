@@ -87,8 +87,7 @@
 
   /* ---------------- CARROSSEL ---------------- */
   .carrossel{position:relative;width:min(1080px,100%);border-radius:var(--raio);overflow:hidden;
-    box-shadow:var(--sombra);background:#000;margin-top:14px;border:1px solid var(--linha);
-    transition:height .45s cubic-bezier(.22,.61,.36,1)}
+    box-shadow:var(--sombra);background:#000;margin-top:14px;border:1px solid var(--linha);min-height:0}
   .progresso{position:absolute;top:0;left:0;height:4px;width:0;z-index:6;
     background:linear-gradient(90deg,#8ff0c0,#7be2ff)}
   .progresso.rodando{animation:carregar 9s linear forwards}
