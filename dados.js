@@ -81,7 +81,7 @@ const destaques = [
     historia:"Marialva é reconhecida pela produção de uvas de mesa de qualidade, que movimentam a economia e o turismo rural.",
     surgimento:"A cultura da uva se desenvolveu nas propriedades da região e virou marca da cidade.",
     atividades:"Turismo rural, visita a parreirais e compra de uvas e derivados.",
-    curiosidade:"A cidade é bastante associada à imagem da uva fina. ✏️ Confira as datas das festas locais."
+    curiosidade:"A cidade é bastante associada à imagem da uva fina."
   },
   {
     regiao:"Maringá", cidade:"Nova Esperança",
@@ -94,7 +94,7 @@ const destaques = [
     historia:"A cidade ficou conhecida pelo capricho com suas praças e jardins floridos.",
     surgimento:"Surgiu no avanço da colonização e da cultura do café no norte-noroeste do estado.",
     atividades:"Passeio pelas praças, jardins e centro da cidade.",
-    curiosidade:"O apelido 'Cidade das Flores' virou marca do município. ✏️ Confira a história local."
+    curiosidade:"O apelido 'Cidade das Flores' virou marca do município."
   },
 
   /* ===== PARANAVAÍ ===== */
@@ -245,7 +245,7 @@ const destaques = [
     historia:"O lago e seu parque são um dos principais espaços de lazer e encontro da população.",
     surgimento:"Tornou-se ponto de convívio e prática de esportes ao ar livre na cidade.",
     atividades:"Caminhada, pesca, esportes e lazer em família.",
-    curiosidade:"Campo Mourão é uma das maiores cidades do centro-noroeste do estado. ✏️ Confira os detalhes do parque."
+    curiosidade:"Campo Mourão é uma das maiores cidades do centro-noroeste do estado."
   },
   {
     regiao:"Campo Mourão", cidade:"Fênix",
@@ -271,7 +271,7 @@ const destaques = [
     historia:"O nome vem do 'Caminho de Peabiru', trilha milenar usada por povos indígenas que ligava o litoral ao interior do continente.",
     surgimento:"A cidade preserva a memória e a referência histórica desse antigo caminho.",
     atividades:"Turismo histórico e cultural sobre o Caminho de Peabiru.",
-    curiosidade:"O Caminho de Peabiru é um dos temas históricos mais fascinantes do Paraná. ✏️ Pesquise os marcos na cidade."
+    curiosidade:"O Caminho de Peabiru é um dos temas históricos mais fascinantes do Paraná."
   },
   {
     regiao:"Campo Mourão", cidade:"Goioerê",
@@ -676,78 +676,78 @@ function embaralhar(arr){
   }
   return arr;
 }
-/* ---- textos reais das cidades genéricas [historia, o que fazer, curiosidade] ---- */
+/* ---- textos das cidades genéricas [historia, emancipação, o que fazer, curiosidade] ---- */
 const TEXTOS = {
   // Maringá
-  "Astorga":["Café e colonização; emancipado em 1951.","Centro, igrejas, festas e propriedades rurais.","Nome inspirado em cidade espanhola."],
-  "Bom Sucesso":["Ocupação agrícola; emancipado em 1954.","Igrejas, praças e festas.","Nome de inspiração religiosa."],
-  "Doutor Camargo":["Agricultura e núcleos rurais; emancipado em 1964.","Praças, igrejas e propriedades.","Nome homenageia personalidade pública."],
-  "Jandaia do Sul":["Café, colonização e ferrovia; emancipado em 1951.","Igrejas, praças e patrimônio.","Jandaia é uma ave brasileira."],
-  "Mandaguaçu":["Colonização agrícola; emancipado em 1951.","Propriedades, igrejas e eventos.","Nome indígena associado a 'abelha grande'."],
-  "Mandaguari":["Café e transporte; emancipado em 1947.","Igrejas, praças e zona rural.","Núcleo importante antes de Maringá."],
-  "Munhoz de Mello":["Colonização agrícola; emancipado em 1955.","Praças, igrejas e propriedades.","Nome homenageia autoridade pública."],
-  "Paiçandu":["Núcleo agrícola próximo a Maringá; emancipado em 1960.","Igrejas, praças e eventos.","Grande integração urbana com Maringá."],
-  "Presidente Castelo Branco":["Colonização agrícola; emancipado em 1964.","Centro, praças e zona rural.","Homenagem a Humberto Castelo Branco."],
-  "Sarandi":["Expansão urbana ligada a Maringá; emancipado em 1981.","Praças, comércio e eventos.","Uma das cidades mais populosas do entorno."],
-  "Santa Fé":["Colonização agrícola; emancipado em 1951.","Igrejas, praças e festas.","Nome de referência religiosa."],
-  "São Jorge do Ivaí":["Agricultura próxima ao rio Ivaí; emancipado em 1960.","Rio, igrejas e passeios rurais.","Nome combina santo e rio."],
+  "Astorga":["Desenvolveu-se com a colonização agrícola do norte paranaense, especialmente no período de expansão do café. A abertura de estradas e a chegada de famílias agricultoras formaram o núcleo urbano.","Emancipado em 1951.","Visitar a área central, igrejas, praças, festas tradicionais, comércio e propriedades rurais.","Seu nome faz referência à cidade espanhola de Astorga."],
+  "Bom Sucesso":["Formou-se durante a ocupação agrícola do norte do Paraná, marcada pela abertura de estradas, loteamento de terras e chegada de migrantes.","Emancipado em 1954.","Conhecer igrejas, praças, festas religiosas, propriedades rurais e atividades comunitárias.","O nome 'Bom Sucesso' tem forte inspiração religiosa e transmite ideia de prosperidade."],
+  "Doutor Camargo":["Desenvolveu-se a partir de comunidades agrícolas e pequenos núcleos rurais ligados à expansão das lavouras no norte do Paraná.","Emancipado em 1964.","Conhecer praças, igrejas, propriedades rurais, festas e a paisagem agrícola.","O nome homenageia uma personalidade pública chamada Camargo."],
+  "Jandaia do Sul":["Cresceu com a cafeicultura, a colonização agrícola e as rotas ferroviárias e rodoviárias que integraram o norte do Paraná.","Emancipado em 1951.","Conhecer igrejas, praças, comércio, festas e o patrimônio local.","'Jandaia' é o nome de uma ave brasileira."],
+  "Mandaguaçu":["Desenvolveu-se com a colonização agrícola e a expansão da área de influência de Maringá, tornando-se parte importante da rede urbana regional.","Emancipado em 1951.","Conhecer propriedades rurais, igrejas, praças, festas e o comércio local.","Nome de origem indígena, associado à expressão 'abelha grande'."],
+  "Mandaguari":["Cresceu com a cafeicultura, a colonização e as rotas de transporte do norte do Paraná; antes de Maringá, já era um núcleo importante de circulação regional.","Emancipado em 1947.","Visitar igrejas, praças, comércio, festas e propriedades rurais.","Foi núcleo importante na ocupação regional antes do crescimento de Maringá."],
+  "Munhoz de Mello":["Formou-se durante a colonização agrícola do norte do Paraná, com propriedades rurais e comunidades ao redor de estradas e serviços locais.","Emancipado em 1955.","Conhecer praças, igrejas, festas e propriedades rurais.","O nome homenageia uma autoridade pública."],
+  "Paiçandu":["Desenvolveu-se como núcleo agrícola e residencial próximo a Maringá; o crescimento urbano e a integração com a cidade-polo moldaram sua economia.","Emancipado em 1960.","Conhecer igrejas, praças, comércio, festas e eventos culturais.","É uma das cidades mais integradas à área urbana e econômica de Maringá."],
+  "Presidente Castelo Branco":["Formou-se durante a colonização agrícola do norte do Paraná, com a abertura de lotes e a formação de comunidades rurais.","Emancipado em 1964.","Visitar o centro, praças, igrejas, festas e propriedades rurais.","O nome homenageia Humberto de Alencar Castelo Branco."],
+  "Sarandi":["Cresceu como núcleo urbano ligado à expansão de Maringá e à ocupação agrícola regional, tornando-se densamente integrada à rede metropolitana.","Emancipado em 1981.","Conhecer praças, igrejas, comércio, restaurantes e eventos locais.","É uma das cidades mais populosas e urbanizadas do entorno de Maringá."],
+  "Santa Fé":["Surgiu com a colonização agrícola e a expansão das lavouras, com a construção de igrejas, estradas e estruturas de atendimento aos moradores.","Emancipado em 1951.","Conhecer igrejas, praças, festas religiosas, comércio e áreas rurais.","O nome tem forte referência religiosa."],
+  "São Jorge do Ivaí":["Desenvolveu-se com a agricultura e a ocupação rural nas proximidades do rio Ivaí, que influenciou o nome e a paisagem do município.","Emancipado em 1960.","Fazer passeios rurais, visitar igrejas, praças e áreas próximas ao rio.","O nome combina a homenagem a São Jorge com a referência ao rio Ivaí."],
   // Paranavaí
-  "Alto Paraná":["Colonização agrícola; emancipado em 1954.","Praças, igrejas e zona rural.","Nome ligado ao rio Paraná."],
-  "Cruzeiro do Sul":["Colonização agrícola; emancipado em 1954.","Praças, igrejas e festas.","Referência à constelação."],
-  "Diamante do Norte":["Expansão agrícola; emancipado em 1964.","Praças, igrejas e zona rural.","Nome alude à riqueza."],
-  "Guairaçá":["Agricultura e estradas; emancipado em 1954.","Igrejas, praças e propriedades.","Nome indígena."],
-  "Itaúna do Sul":["Ocupação agrícola; emancipado em 1964.","Praças, igrejas e paisagem rural.","Nome indígena ligado a pedra escura."],
-  "Jardim Olinda":["Colonização rural; emancipado em 1964.","Praças, igrejas e zona rural.","Um dos menores municípios da região."],
-  "Loanda":["Colonização e comércio regional; emancipado em 1954.","Centro, igrejas e eventos.","Polo regional do extremo noroeste."],
-  "Marilena":["Rio Paraná, pesca e agricultura; emancipado em 1964.","Pesca, áreas ribeirinhas e passeios.","Ligada às ilhas do Rio Paraná."],
-  "Nova Londrina":["Colonização e migração; emancipado em 1954.","Praças, igrejas e comércio.","Referência a Londrina."],
-  "Paraíso do Norte":["Expansão agrícola; emancipado em 1954.","Praças, igrejas e festas.","Nome ligado à fertilidade regional."],
-  "Santa Isabel do Ivaí":["Colonização próxima ao Ivaí; emancipado em 1964.","Igrejas e propriedades rurais.","Nome combina santa e rio."],
-  "Terra Rica":["Colonização agrícola; emancipado em 1954.","Zona rural, praças e festas.","Nome destaca a fertilidade."],
+  "Alto Paraná":["Surgiu com a colonização agrícola e a expansão das lavouras no noroeste, acompanhada pela abertura de estradas e formação de comunidades rurais.","Emancipado em 1954.","Conhecer praças, igrejas, festas e propriedades rurais.","O nome faz referência à posição elevada e ao rio Paraná."],
+  "Cruzeiro do Sul":["Formou-se durante a colonização agrícola do noroeste paranaense, com a chegada de famílias, abertura de estradas e implantação de serviços.","Emancipado em 1954.","Conhecer praças, igrejas, festas e paisagens rurais.","O nome faz referência à constelação do Cruzeiro do Sul."],
+  "Diamante do Norte":["Surgiu durante a expansão agrícola e a colonização das terras do norte do Paraná, ligado à criação de novos núcleos agrícolas.","Emancipado em 1964.","Visitar praças, igrejas, festas e propriedades rurais.","O nome faz alusão à ideia de riqueza e valor."],
+  "Guairaçá":["Desenvolveu-se com a agricultura e a abertura de caminhos que conectaram as comunidades do noroeste.","Emancipado em 1954.","Conhecer igrejas, praças, festas e propriedades agrícolas.","O nome é de origem indígena."],
+  "Itaúna do Sul":["Formou-se durante a ocupação agrícola do noroeste paranaense, com a criação de propriedades e comunidades rurais.","Emancipado em 1964.","Conhecer praças, igrejas, festas e paisagens rurais.","'Itaúna' tem origem indígena, associada à ideia de pedra escura."],
+  "Jardim Olinda":["Surgiu como comunidade de colonização rural, com pequenas propriedades agrícolas; o crescimento da população levou à criação do município.","Emancipado em 1964.","Visitar praças, igrejas, festas e propriedades rurais.","Está entre os menores municípios do Paraná em população."],
+  "Loanda":["Cresceu com a colonização agrícola e passou a exercer função comercial e de serviços para municípios próximos, consolidando-se como polo urbano.","Emancipado em 1954.","Conhecer o centro, igrejas, praças, comércio, restaurantes e eventos culturais.","É um importante polo regional do extremo noroeste do Paraná."],
+  "Marilena":["Desenvolveu-se próximo ao rio Paraná, com agricultura, pesca e ocupação ribeirinha; a paisagem fluvial é parte importante de sua identidade.","Emancipado em 1964.","Pescar, visitar áreas ribeirinhas, fazer passeios de barco e conhecer ilhas e praias de água doce.","A cidade está ligada à paisagem das ilhas e águas do rio Paraná."],
+  "Nova Londrina":["Desenvolveu-se com a chegada de migrantes e a colonização agrícola, em contexto de expansão das lavouras e criação de novos núcleos urbanos.","Emancipado em 1954.","Conhecer praças, igrejas, comércio, festas e propriedades rurais.","Recebeu seu nome em referência a Londrina, no norte do Paraná."],
+  "Paraíso do Norte":["Surgiu com a expansão agrícola e a ocupação de terras produtivas, crescendo com a criação de propriedades e serviços básicos.","Emancipado em 1954.","Visitar praças, igrejas, festas, comércio e zona rural.","O nome foi escolhido para transmitir ideia de beleza e fertilidade."],
+  "Santa Isabel do Ivaí":["Formou-se com a colonização agrícola e a ocupação das terras próximas ao rio Ivaí, com a agricultura e a vida rural no centro do desenvolvimento.","Emancipado em 1964.","Conhecer igrejas, praças, festas e propriedades rurais.","O nome homenageia Santa Isabel e faz referência ao rio Ivaí."],
+  "Terra Rica":["Surgiu com a colonização agrícola e a exploração das terras férteis do noroeste; a agricultura foi central para sua formação econômica.","Emancipado em 1954.","Conhecer a zona rural, praças, igrejas, festas e propriedades agrícolas.","O nome destaca a fertilidade e o potencial produtivo das terras."],
   // Umuarama
-  "Altônia":["Colonização e Rio Paraná; emancipada em 1964.","Rios, parques e áreas rurais.","Porta para o turismo natural."],
-  "Douradina":["Colonização agrícola; emancipada em 1986.","Praças, igrejas e propriedades.","Nome associado a terra dourada."],
-  "Iporã":["Colonização agrícola; emancipado em 1961.","Praças, igrejas e festas.","Nome tupi associado a 'água bonita'."],
-  "Nova Olímpia":["Colonização agrícola; emancipado em 1964.","Praças, igrejas e propriedades.","Referência à Olímpia grega."],
-  "Pérola":["Colonização agrícola; emancipada em 1964.","Praças, comércio e zona rural.","Nome simboliza valor e beleza."],
+  "Altônia":["Formou-se durante a colonização agrícola do extremo noroeste, mantendo relação com as paisagens do rio Paraná; agricultura e vias de acesso impulsionaram seu crescimento.","Emancipada em 1964.","Conhecer áreas rurais, rios, parques e atrativos naturais próximos ao rio Paraná.","É uma das portas de entrada para o turismo de natureza do extremo noroeste."],
+  "Douradina":["Desenvolveu-se com a colonização agrícola e a formação de pequenas propriedades; o nome remete a uma terra produtiva e valorizada.","Emancipada em 1986.","Visitar praças, igrejas, festas e propriedades rurais.","O nome está associado à ideia de uma terra dourada."],
+  "Iporã":["Formou-se durante a colonização agrícola e a expansão das lavouras; o núcleo urbano cresceu com serviços, comércio e vias de ligação.","Emancipado em 1961.","Conhecer praças, igrejas, comércio, festas e propriedades rurais.","'Iporã' é uma expressão tupi associada à ideia de 'água bonita'."],
+  "Nova Olímpia":["Surgiu durante a colonização agrícola e a expansão das lavouras; o nome faz referência à antiga Olímpia, da história grega.","Emancipado em 1964.","Conhecer praças, igrejas, festas e propriedades rurais.","O nome remete à cidade histórica de Olímpia, na Grécia."],
+  "Pérola":["Desenvolveu-se com a colonização agrícola e o crescimento das lavouras; o nome foi escolhido para transmitir valor, beleza e singularidade.","Emancipada em 1964.","Conhecer praças, igrejas, comércio, festas e propriedades rurais.","O nome simboliza valor e beleza."],
   // Cianorte
-  "Cidade Gaúcha":["Colonização por migrantes gaúchos; emancipada em 1961.","Praças, igrejas e festas.","Referência a colonizadores gaúchos."],
-  "Guaporema":["Ocupação agrícola; emancipada em 1961.","Centro, igreja e zona rural.","Nome de origem indígena."],
-  "Japurá":["Colonização agrícola; emancipada em 1961.","Praças, igrejas e zona rural.","Também é nome de um rio amazônico."],
-  "Jussara":["Colonização agrícola; emancipada em 1958.","Praça, igrejas e eventos.","Jussara é uma palmeira."],
-  "Rondon":["Colonização e vias regionais; emancipado em 1955.","Praças, igrejas e zona rural.","Homenagem ao marechal Rondon."],
-  "São Manoel do Paraná":["Ocupação agrícola; emancipado em 1961.","Igreja, praças e festas.","Nome religioso e estadual."],
-  "São Tomé":["Colonização agrícola; emancipado em 1961.","Igrejas, festas e zona rural.","Referência ao apóstolo São Tomé."],
-  "Tapejara":["Agricultura e colonização; emancipado em 1964.","Praças, igrejas e áreas rurais.","Topônimo indígena."],
-  "Terra Boa":["Colonização agrícola; emancipado em 1955.","Praças, igrejas e propriedades.","Nome destaca o solo fértil."],
-  "Tuneiras do Oeste":["Ocupação agrícola; emancipado em 1964.","Zona rural, igrejas e eventos.","Nome ligado às tunas."],
+  "Cidade Gaúcha":["Surgiu durante a colonização agrícola, com forte presença de famílias migrantes, incluindo pessoas vindas do Rio Grande do Sul.","Emancipada em 1961.","Conhecer praças, igrejas, festas tradicionais e propriedades rurais.","O nome faz referência à presença de colonizadores gaúchos."],
+  "Guaporema":["Desenvolveu-se com a ocupação agrícola e a formação de pequenos núcleos rurais, acompanhada da organização administrativa local.","Emancipada em 1961.","Passear pelo centro, visitar a igreja, praças, festas e zona rural.","O nome tem origem indígena."],
+  "Japurá":["Surgiu com a colonização agrícola e a expansão das lavouras; a formação de comunidades rurais e os serviços levaram à emancipação.","Emancipada em 1961.","Visitar praças, igrejas, festas e áreas rurais.","Japurá também é o nome de um rio da região amazônica."],
+  "Jussara":["Desenvolveu-se com a colonização agrícola e a formação de núcleos rurais, com a agricultura e a organização comunitária no centro do crescimento.","Emancipada em 1958.","Conhecer a praça central, igrejas, festas, comércio e propriedades rurais.","Jussara é o nome de uma palmeira nativa da Mata Atlântica."],
+  "Rondon":["Cresceu com a colonização agrícola e a abertura de vias de ligação regional; o nome homenageia o marechal Cândido Rondon.","Emancipado em 1955.","Visitar praças, igrejas, festas, comércio e propriedades rurais.","Homenageia o marechal Rondon, conhecido pela integração territorial e defesa dos povos indígenas."],
+  "São Manoel do Paraná":["Formou-se com a ocupação agrícola e a organização de comunidades rurais; os serviços locais favoreceram a estruturação do município.","Emancipado em 1961.","Conhecer a igreja, praças, festas e propriedades rurais.","O nome combina uma referência religiosa com a identificação estadual."],
+  "São Tomé":["Surgiu durante a colonização agrícola do noroeste paranaense, com a formação de propriedades e comunidades rurais.","Emancipado em 1961.","Visitar igrejas, participar de festas religiosas e conhecer a zona rural.","O nome é uma referência ao apóstolo São Tomé."],
+  "Tapejara":["Desenvolveu-se com a agricultura, a colonização e a formação de pequenas propriedades, preservando uma referência de origem indígena no nome.","Emancipado em 1964.","Conhecer praças, igrejas, eventos e paisagens rurais.","'Tapejara' é um topônimo de origem indígena."],
+  "Terra Boa":["Formou-se durante a colonização agrícola e destacou-se pela fertilidade das terras; a agricultura foi fundamental para seu crescimento.","Emancipado em 1955.","Visitar praças, igrejas, festas, comércio e propriedades rurais.","O próprio nome destaca a qualidade agrícola do solo."],
+  "Tuneiras do Oeste":["Surgiu com a ocupação agrícola e a abertura de estradas no noroeste; o desenvolvimento das comunidades rurais levou à criação do município.","Emancipado em 1964.","Conhecer a zona rural, igrejas, praças, festas e eventos locais.","O nome está associado às 'tunas', plantas conhecidas regionalmente."],
   // Campo Mourão
-  "Altamira do Paraná":["Colonização agrícola; emancipado em 1979.","Praças, igrejas e zona rural.","Nome significa lugar alto."],
-  "Araruna":["Expansão agrícola; emancipada em 1955.","Praças, igrejas e festas.","Nome indígena associado à arara-preta."],
-  "Barbosa Ferraz":["Ocupação agrícola; emancipado em 1960.","Praças, igrejas e propriedades.","Homenagem a político paranaense."],
-  "Boa Esperança":["Colonização agrícola; emancipado em 1964.","Igrejas, praças e zona rural.","Nome representa a esperança dos colonizadores."],
-  "Campina da Lagoa":["Colonização agrícola; emancipado em 1964.","Praças, igrejas e paisagens rurais.","Nome descreve campina e lagoa."],
-  "Corumbataí do Sul":["Colonização próxima ao rio Corumbataí; emancipado em 1989.","Rios, áreas rurais e festas.","Nome faz referência ao rio."],
-  "Engenheiro Beltrão":["Expansão agrícola e transportes; emancipado em 1954.","Praças, igrejas e zona rural.","Homenagem a um engenheiro."],
-  "Janiópolis":["Colonização agrícola; emancipado em 1960.","Praças, igrejas e eventos.","Homenagem a Jânio Quadros."],
-  "Juranda":["Ocupação agrícola; emancipada em 1982.","Praças, igrejas e propriedades.","Nome de origem indígena."],
-  "Luiziana":["Colonização agrícola; emancipada em 1987.","Igrejas, praças e festas.","Nome de homenagem pessoal."],
-  "Mamborê":["Colonização e vias para Campo Mourão; emancipado em 1960.","Praças, igrejas e zona rural.","Topônimo indígena."],
-  "Moreira Sales":["Colonização agrícola; emancipado em 1960.","Praças, igrejas e propriedades.","Nome homenageia personalidade regional."],
-  "Nova Cantu":["Colonização agrícola; emancipada em 1964.","Praças, igrejas e festas.","Referência a Cantu, na Itália."],
-  "Quinta do Sol":["Ocupação agrícola; emancipado em 1964.","Igrejas, praças e festas.","Nome remete a paisagem ensolarada."],
-  "Rancho Alegre d'Oeste":["Colonização agrícola; emancipado em 1990.","Praças, igrejas e propriedades.","Nome sugere um rancho acolhedor."],
-  "Roncador":["Colonização agrícola e relevo ondulado; emancipado em 1960.","Zona rural, praças e áreas naturais.","Nome possivelmente ligado ao som de rios."],
-  "Ubiratã":["Colonização agrícola; emancipado em 1961.","Praças, parques, igrejas e festas.","Nome tupi associado a 'lança forte' ou 'madeira dura'."]
+  "Altamira do Paraná":["Surgiu com a colonização agrícola e a formação de comunidades rurais, acompanhando a expansão das lavouras e a abertura de estradas.","Emancipado em 1979.","Conhecer praças, igrejas, festas e propriedades rurais.","O nome remete à ideia de lugar alto ou de bela vista."],
+  "Araruna":["Desenvolveu-se com a expansão agrícola e a colonização do centro-oeste paranaense, com propriedades rurais e serviços locais.","Emancipada em 1955.","Visitar praças, igrejas, festas e áreas rurais.","'Araruna' é um nome indígena associado à arara-preta."],
+  "Barbosa Ferraz":["Formou-se com a ocupação agrícola e a abertura de estradas, crescendo com a produção rural e a organização das comunidades.","Emancipado em 1960.","Conhecer praças, igrejas, eventos, propriedades rurais e comércio local.","Homenageia uma personalidade política paranaense."],
+  "Boa Esperança":["Surgiu durante a colonização agrícola e o crescimento das lavouras; recebeu o nome em referência às expectativas dos primeiros moradores.","Emancipado em 1964.","Visitar igrejas, praças, festas e propriedades rurais.","O nome representa a esperança dos colonizadores no desenvolvimento local."],
+  "Campina da Lagoa":["Desenvolveu-se com a colonização agrícola e a formação de núcleos rurais; a denominação remete às características da paisagem local.","Emancipado em 1964.","Conhecer a praça, igrejas, festas, áreas rurais e paisagens próximas a cursos d'água.","O nome combina a ideia de campina com a presença de uma lagoa."],
+  "Corumbataí do Sul":["Formou-se com a colonização agrícola e a ocupação das áreas próximas ao rio Corumbataí, que influenciou a identidade do município.","Emancipado em 1989.","Conhecer rios, áreas rurais, igrejas, praças e festas locais.","O nome faz referência ao rio Corumbataí e à localização ao sul da região."],
+  "Engenheiro Beltrão":["Surgiu com a expansão agrícola e a construção de vias de transporte; as lavouras e a circulação regional favoreceram o crescimento.","Emancipado em 1954.","Visitar praças, igrejas, eventos e propriedades rurais.","O nome homenageia um engenheiro ligado ao desenvolvimento regional."],
+  "Janiópolis":["Formou-se com a colonização agrícola e a organização de núcleos rurais; o nome homenageia Jânio Quadros.","Emancipado em 1960.","Visitar praças, igrejas, festas e propriedades rurais.","O nome homenageia Jânio Quadros, presidente do Brasil em 1961."],
+  "Juranda":["Desenvolveu-se com a ocupação agrícola e a formação de pequenas propriedades; a comunidade cresceu com estradas e serviços.","Emancipada em 1982.","Conhecer praças, igrejas, festas e áreas rurais.","O nome tem origem indígena."],
+  "Luiziana":["Formou-se durante a colonização agrícola e a expansão da produção rural; a organização das comunidades levou à criação do município.","Emancipada em 1987.","Visitar igrejas, praças, festas e propriedades rurais.","O nome é uma homenagem de caráter pessoal e histórico."],
+  "Mamborê":["Surgiu com a colonização agrícola e as rotas de ligação com Campo Mourão e outras cidades; lavouras e comunidades favoreceram sua emancipação.","Emancipado em 1960.","Conhecer praças, igrejas, eventos e propriedades rurais.","'Mamborê' é um topônimo de origem indígena."],
+  "Moreira Sales":["Desenvolveu-se com a colonização agrícola e o crescimento das lavouras; o nome homenageia uma personalidade regional.","Emancipado em 1960.","Visitar praças, igrejas, festas e propriedades rurais.","Recebeu o nome em homenagem a uma personalidade regional."],
+  "Nova Cantu":["Formou-se com a colonização agrícola e a criação de pequenas propriedades, organizada a partir do crescimento das comunidades rurais.","Emancipada em 1964.","Conhecer praças, igrejas, festas e propriedades rurais.","O nome faz referência a Cantu, cidade da Itália."],
+  "Quinta do Sol":["Desenvolveu-se com a ocupação agrícola e a formação de núcleos rurais, com a agricultura no centro do crescimento da comunidade.","Emancipado em 1964.","Conhecer igrejas, praças, festas e propriedades rurais.","O nome remete a uma paisagem ensolarada."],
+  "Rancho Alegre d'Oeste":["Formou-se com a colonização agrícola e a abertura de estradas rurais; o nome transmite a ideia de um lugar acolhedor a oeste.","Emancipado em 1990.","Visitar praças, igrejas, festas e propriedades rurais.","O nome combina a ideia de rancho acolhedor com a posição a oeste."],
+  "Roncador":["Surgiu com a colonização agrícola e a ocupação de áreas de relevo ondulado; a paisagem, os rios e as comunidades marcaram o desenvolvimento.","Emancipado em 1960.","Conhecer a zona rural, praças, igrejas, festas e áreas naturais.","O nome é frequentemente associado ao som de rios ou quedas d'água."],
+  "Ubiratã":["Desenvolveu-se com a colonização agrícola, sobretudo a partir da década de 1950; lavouras, estradas e serviços consolidaram a cidade como centro regional.","Emancipado em 1961.","Visitar praças, parques, igrejas, festas e propriedades rurais.","'Ubiratã' é um nome tupi associado a 'lança forte' ou 'madeira dura'."]
 };
 function aplicarTextos(p){
   const t = TEXTOS[p.cidade];
   if(!t) return p;
-  p.historia = t[0]; p.atividades = t[1]; p.curiosidade = t[2];
-  p.surgimento = ""; p.pesquisar = false;
+  p.historia = t[0]; p.surgimento = t[1]; p.atividades = t[2]; p.curiosidade = t[3];
+  p.pesquisar = false;
   p.epoca = p.cidade === "Marilena"
     ? "Novembro a março, na temporada das praias do Rio Paraná."
-    : "Abril a setembro, quando o clima fica mais ameno.";
+    : "Abril a setembro, quando o clima fica mais ameno e seco.";
   return p;
 }
 
