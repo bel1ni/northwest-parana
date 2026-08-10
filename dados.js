@@ -20,7 +20,7 @@ const destaques = [
   /* ===== MARINGÁ ===== */
   {
     regiao:"Maringá", cidade:"Maringá",
-    nome:"Catedral Basílica Menor de Nossa Senhora da Glória",
+    nome:"Pontos de Maringá",
     emoji:"🗼", cor:"linear-gradient(135deg,#2c3e50,#4a6274)",
     imagem:"imagens/catedral-maringa.jpg", mapa:"Catedral de Maringá, Paraná",
     subtitulo:"O cartão-postal de Maringá: uma catedral em forma de cone que aponta para o céu.",
@@ -541,7 +541,7 @@ const CURADORIA = {
     {nome:"Praça dos Pioneiros", link:"https://maps.app.goo.gl/ctFgjTmtf3o8rag36"},
     {nome:"Cachoeira Usina Velha", link:"https://maps.app.goo.gl/b9hFs56RhGUTHKQG9"} ] },
   "São Manoel do Paraná": { emoji:"🌳", credito:"Henrique Barbosa", locais:[
-    {nome:"Reserva Caraguatatiba da Divisa", query:"Reserva Ecológica Caraguatatiba da Divisa, São Manoel do Paraná, PR"} ] },
+    {nome:"Reserva Ecológica Caraguatatiba", link:"https://maps.app.goo.gl/vpXF8r8P9ZiueHL68", query:"Reserva Ecológica Caraguatatiba da Divisa, São Manoel do Paraná, PR"} ] },
   "São Tomé": { emoji:"🌳", locais:[
     {nome:"Parque Ecológico", query:"Parque Ecológico de São Tomé, PR"},
     {nome:"Museu da Cidade", query:"Museu da Cidade, São Tomé, PR"} ] },
@@ -636,14 +636,13 @@ const CURADORIA = {
     {nome:"Parque do Lago", query:"Parque do Lago, Sarandi, PR"},
     {nome:"Praça dos Pioneiros", query:"Praça dos Pioneiros, Sarandi, PR"} ] },
   "Santa Fé": { emoji:"⛲", locais:[
-    {nome:"Praça Central (Centro Histórico)", query:"Praça Central, Santa Fé, PR"} ] },
+    {nome:"Praça Central (Centro Histórico)", query:"Praça Central, Santa Fé, PR"}, 
+    {nome:"Salto Bandeirantes", link:"https://maps.app.goo.gl/GuWK433rqoiQwrsZ8", query:"Salto Bandeirantes, Santa Fé, PR"},
+    {nome:"Balneário Rossi", link:"https://maps.app.goo.gl/XWrCzexvhQPW4yEi9", query:"Balneário Rossi, Santa Fé, PR"}] },
   "São Jorge do Ivaí": { emoji:"🦕", credito:"via Google Maps", locais:[
     {nome:"Park dos Dinossauros", link:"https://maps.app.goo.gl/QneB2LZFcf335Fff6"},
     {nome:"Parque Ambiental do Ribeirão Itamaraty", link:"https://maps.app.goo.gl/UVqu73xBoCFHeqLm6"},
     {nome:"Paróquia São Jorge", link:"https://maps.app.goo.gl/QoDRfaYAvn8EAdMZ8"} ] },
-  "Uniflor": { emoji:"🌻", locais:[
-    {nome:"Campos de Flores", query:"Uniflor, Paraná"},
-    {nome:"Praça Pedro Arnaut Toledo", query:"Praça Pedro Arnaut Toledo, Uniflor, PR"} ] },
   "Paranavaí": { nome:"Pontos de Paranavaí", emoji:"🏙️", locais:[
     {nome:"Centro (Cidade Poesia)", link:"https://maps.app.goo.gl/MTY8jYmLxeT73QxYA"},
     {nome:"Pedalinho Ouro Preto", link:"https://maps.app.goo.gl/e9tt9yTj4YtxQavF8"},
@@ -677,8 +676,84 @@ function embaralhar(arr){
   }
   return arr;
 }
+/* ---- textos reais das cidades genéricas [historia, o que fazer, curiosidade] ---- */
+const TEXTOS = {
+  // Maringá
+  "Astorga":["Café e colonização; emancipado em 1951.","Centro, igrejas, festas e propriedades rurais.","Nome inspirado em cidade espanhola."],
+  "Bom Sucesso":["Ocupação agrícola; emancipado em 1954.","Igrejas, praças e festas.","Nome de inspiração religiosa."],
+  "Doutor Camargo":["Agricultura e núcleos rurais; emancipado em 1964.","Praças, igrejas e propriedades.","Nome homenageia personalidade pública."],
+  "Jandaia do Sul":["Café, colonização e ferrovia; emancipado em 1951.","Igrejas, praças e patrimônio.","Jandaia é uma ave brasileira."],
+  "Mandaguaçu":["Colonização agrícola; emancipado em 1951.","Propriedades, igrejas e eventos.","Nome indígena associado a 'abelha grande'."],
+  "Mandaguari":["Café e transporte; emancipado em 1947.","Igrejas, praças e zona rural.","Núcleo importante antes de Maringá."],
+  "Munhoz de Mello":["Colonização agrícola; emancipado em 1955.","Praças, igrejas e propriedades.","Nome homenageia autoridade pública."],
+  "Paiçandu":["Núcleo agrícola próximo a Maringá; emancipado em 1960.","Igrejas, praças e eventos.","Grande integração urbana com Maringá."],
+  "Presidente Castelo Branco":["Colonização agrícola; emancipado em 1964.","Centro, praças e zona rural.","Homenagem a Humberto Castelo Branco."],
+  "Sarandi":["Expansão urbana ligada a Maringá; emancipado em 1981.","Praças, comércio e eventos.","Uma das cidades mais populosas do entorno."],
+  "Santa Fé":["Colonização agrícola; emancipado em 1951.","Igrejas, praças e festas.","Nome de referência religiosa."],
+  "São Jorge do Ivaí":["Agricultura próxima ao rio Ivaí; emancipado em 1960.","Rio, igrejas e passeios rurais.","Nome combina santo e rio."],
+  // Paranavaí
+  "Alto Paraná":["Colonização agrícola; emancipado em 1954.","Praças, igrejas e zona rural.","Nome ligado ao rio Paraná."],
+  "Cruzeiro do Sul":["Colonização agrícola; emancipado em 1954.","Praças, igrejas e festas.","Referência à constelação."],
+  "Diamante do Norte":["Expansão agrícola; emancipado em 1964.","Praças, igrejas e zona rural.","Nome alude à riqueza."],
+  "Guairaçá":["Agricultura e estradas; emancipado em 1954.","Igrejas, praças e propriedades.","Nome indígena."],
+  "Itaúna do Sul":["Ocupação agrícola; emancipado em 1964.","Praças, igrejas e paisagem rural.","Nome indígena ligado a pedra escura."],
+  "Jardim Olinda":["Colonização rural; emancipado em 1964.","Praças, igrejas e zona rural.","Um dos menores municípios da região."],
+  "Loanda":["Colonização e comércio regional; emancipado em 1954.","Centro, igrejas e eventos.","Polo regional do extremo noroeste."],
+  "Marilena":["Rio Paraná, pesca e agricultura; emancipado em 1964.","Pesca, áreas ribeirinhas e passeios.","Ligada às ilhas do Rio Paraná."],
+  "Nova Londrina":["Colonização e migração; emancipado em 1954.","Praças, igrejas e comércio.","Referência a Londrina."],
+  "Paraíso do Norte":["Expansão agrícola; emancipado em 1954.","Praças, igrejas e festas.","Nome ligado à fertilidade regional."],
+  "Santa Isabel do Ivaí":["Colonização próxima ao Ivaí; emancipado em 1964.","Igrejas e propriedades rurais.","Nome combina santa e rio."],
+  "Terra Rica":["Colonização agrícola; emancipado em 1954.","Zona rural, praças e festas.","Nome destaca a fertilidade."],
+  // Umuarama
+  "Altônia":["Colonização e Rio Paraná; emancipada em 1964.","Rios, parques e áreas rurais.","Porta para o turismo natural."],
+  "Douradina":["Colonização agrícola; emancipada em 1986.","Praças, igrejas e propriedades.","Nome associado a terra dourada."],
+  "Iporã":["Colonização agrícola; emancipado em 1961.","Praças, igrejas e festas.","Nome tupi associado a 'água bonita'."],
+  "Nova Olímpia":["Colonização agrícola; emancipado em 1964.","Praças, igrejas e propriedades.","Referência à Olímpia grega."],
+  "Pérola":["Colonização agrícola; emancipada em 1964.","Praças, comércio e zona rural.","Nome simboliza valor e beleza."],
+  // Cianorte
+  "Cidade Gaúcha":["Colonização por migrantes gaúchos; emancipada em 1961.","Praças, igrejas e festas.","Referência a colonizadores gaúchos."],
+  "Guaporema":["Ocupação agrícola; emancipada em 1961.","Centro, igreja e zona rural.","Nome de origem indígena."],
+  "Japurá":["Colonização agrícola; emancipada em 1961.","Praças, igrejas e zona rural.","Também é nome de um rio amazônico."],
+  "Jussara":["Colonização agrícola; emancipada em 1958.","Praça, igrejas e eventos.","Jussara é uma palmeira."],
+  "Rondon":["Colonização e vias regionais; emancipado em 1955.","Praças, igrejas e zona rural.","Homenagem ao marechal Rondon."],
+  "São Manoel do Paraná":["Ocupação agrícola; emancipado em 1961.","Igreja, praças e festas.","Nome religioso e estadual."],
+  "São Tomé":["Colonização agrícola; emancipado em 1961.","Igrejas, festas e zona rural.","Referência ao apóstolo São Tomé."],
+  "Tapejara":["Agricultura e colonização; emancipado em 1964.","Praças, igrejas e áreas rurais.","Topônimo indígena."],
+  "Terra Boa":["Colonização agrícola; emancipado em 1955.","Praças, igrejas e propriedades.","Nome destaca o solo fértil."],
+  "Tuneiras do Oeste":["Ocupação agrícola; emancipado em 1964.","Zona rural, igrejas e eventos.","Nome ligado às tunas."],
+  // Campo Mourão
+  "Altamira do Paraná":["Colonização agrícola; emancipado em 1979.","Praças, igrejas e zona rural.","Nome significa lugar alto."],
+  "Araruna":["Expansão agrícola; emancipada em 1955.","Praças, igrejas e festas.","Nome indígena associado à arara-preta."],
+  "Barbosa Ferraz":["Ocupação agrícola; emancipado em 1960.","Praças, igrejas e propriedades.","Homenagem a político paranaense."],
+  "Boa Esperança":["Colonização agrícola; emancipado em 1964.","Igrejas, praças e zona rural.","Nome representa a esperança dos colonizadores."],
+  "Campina da Lagoa":["Colonização agrícola; emancipado em 1964.","Praças, igrejas e paisagens rurais.","Nome descreve campina e lagoa."],
+  "Corumbataí do Sul":["Colonização próxima ao rio Corumbataí; emancipado em 1989.","Rios, áreas rurais e festas.","Nome faz referência ao rio."],
+  "Engenheiro Beltrão":["Expansão agrícola e transportes; emancipado em 1954.","Praças, igrejas e zona rural.","Homenagem a um engenheiro."],
+  "Janiópolis":["Colonização agrícola; emancipado em 1960.","Praças, igrejas e eventos.","Homenagem a Jânio Quadros."],
+  "Juranda":["Ocupação agrícola; emancipada em 1982.","Praças, igrejas e propriedades.","Nome de origem indígena."],
+  "Luiziana":["Colonização agrícola; emancipada em 1987.","Igrejas, praças e festas.","Nome de homenagem pessoal."],
+  "Mamborê":["Colonização e vias para Campo Mourão; emancipado em 1960.","Praças, igrejas e zona rural.","Topônimo indígena."],
+  "Moreira Sales":["Colonização agrícola; emancipado em 1960.","Praças, igrejas e propriedades.","Nome homenageia personalidade regional."],
+  "Nova Cantu":["Colonização agrícola; emancipada em 1964.","Praças, igrejas e festas.","Referência a Cantu, na Itália."],
+  "Quinta do Sol":["Ocupação agrícola; emancipado em 1964.","Igrejas, praças e festas.","Nome remete a paisagem ensolarada."],
+  "Rancho Alegre d'Oeste":["Colonização agrícola; emancipado em 1990.","Praças, igrejas e propriedades.","Nome sugere um rancho acolhedor."],
+  "Roncador":["Colonização agrícola e relevo ondulado; emancipado em 1960.","Zona rural, praças e áreas naturais.","Nome possivelmente ligado ao som de rios."],
+  "Ubiratã":["Colonização agrícola; emancipado em 1961.","Praças, parques, igrejas e festas.","Nome tupi associado a 'lança forte' ou 'madeira dura'."]
+};
+function aplicarTextos(p){
+  const t = TEXTOS[p.cidade];
+  if(!t) return p;
+  p.historia = t[0]; p.atividades = t[1]; p.curiosidade = t[2];
+  p.surgimento = ""; p.pesquisar = false;
+  p.epoca = p.cidade === "Marilena"
+    ? "Novembro a março, na temporada das praias do Rio Paraná."
+    : "Abril a setembro, quando o clima fica mais ameno.";
+  return p;
+}
+
 const pontos = embaralhar(
   [...destaques, ...genericas.map(expandir)]
     .filter(p => !REMOVER.has(p.cidade))
     .map(aplicarCuradoria)
+    .map(aplicarTextos)
 );

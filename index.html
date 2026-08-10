@@ -207,10 +207,10 @@
   <div class="pontos" id="pontos"></div>
 
   <footer>
-    <span class="marca">Northwest Paraná</span> · Guia Turístico do Noroeste · projeto em desenvolvimento<br>
-    Use <strong>← →</strong> do teclado · a passagem automática pausa ao interagir.<br>
-    Cards com <strong>✏️ Para completar</strong> são um ponto de partida — complete os detalhes na pesquisa.<br>
-    ⚠️ Confira datas e informações em fontes oficiais antes de usar.
+    <span class="marca">Northwest Paraná</span> · Guia Turístico do Noroeste · projeto escolar<br>
+    Use <strong>← →</strong> do teclado<br>
+    <p>Criado por <strong>Mariane Belini</strong></p>
+    Patrocínio <a href="http://devlini.com" target="_blank" rel="noopener noreferrer"><strong>DEVLINI</strong></a>
   </footer>
 
   <script src="dados.js"></script>
@@ -267,12 +267,12 @@
           <p class="subtitulo">${p.subtitulo}</p>
           <div class="mapas">${botoes}</div>
           <div class="infos">
-            <div class="info"><div class="rot">📌 Local</div><p>${p.local}</p></div>
-            <div class="info"><div class="rot">📅 Melhor época</div><p>${p.epoca}</p></div>
-            <div class="info"><div class="rot">📖 História</div><p>${p.historia}</p></div>
-            <div class="info"><div class="rot">🌱 Surgimento</div><p>${p.surgimento}</p></div>
-            <div class="info"><div class="rot">🎯 O que fazer</div><p>${p.atividades}</p></div>
-            <div class="info"><div class="rot">✨ Curiosidade</div><p>${p.curiosidade}</p></div>
+            ${p.local?`<div class="info"><div class="rot">📌 Local</div><p>${p.local}</p></div>`:""}
+            ${p.epoca?`<div class="info"><div class="rot">📅 Melhor época</div><p>${p.epoca}</p></div>`:""}
+            ${p.historia?`<div class="info"><div class="rot">📖 História</div><p>${p.historia}</p></div>`:""}
+            ${p.surgimento?`<div class="info"><div class="rot">🌱 Surgimento</div><p>${p.surgimento}</p></div>`:""}
+            ${p.atividades?`<div class="info"><div class="rot">🎯 O que fazer</div><p>${p.atividades}</p></div>`:""}
+            ${p.curiosidade?`<div class="info"><div class="rot">✨ Curiosidade</div><p>${p.curiosidade}</p></div>`:""}
           </div>
         </div>`;
       trilho.appendChild(s);
