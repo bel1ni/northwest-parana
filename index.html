@@ -96,7 +96,8 @@
   .slide{min-width:100%;position:relative;display:flex;flex-direction:column;background:var(--card)}
   /* foto: faixa no TOPO do card (altura fixa), não cobre o conteúdo */
   .foto{position:relative;width:100%;height:clamp(200px,40vh,380px);flex:none;overflow:hidden;
-    background-size:cover;background-position:center;background-color:#0a1712}
+    background-size:contain;background-repeat:no-repeat;background-position:center;
+    background-color:#0e1c17;padding:0}
   .foto::after{content:"";position:absolute;left:0;right:0;bottom:0;height:42%;
     background:linear-gradient(180deg,transparent,var(--card))}
   .emoji-fundo{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
@@ -263,7 +264,7 @@
           <div class="linha-topo">
             <span class="cidade" style="border-color:${cor}66"><span style="color:${cor}">●</span> ${p.cidade} · ${p.regiao}</span>${badge}
           </div>
-          <h2>${p.nome}</h2>
+          <h2>Pontos turísticos de ${p.cidade}</h2>
           <p class="subtitulo">${p.subtitulo}</p>
           <div class="mapas">${botoes}</div>
           <div class="infos">

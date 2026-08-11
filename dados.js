@@ -605,6 +605,11 @@ const CURADORIA = {
     {nome:"Parque dos Ipês", query:"Parque dos Ipês, Ubiratã, PR"} ] },
 
   /* ---- MARINGÁ (região) ---- */
+  "Maringá": { locais:[
+    {nome:"Catedral de Maringá", query:"Catedral de Maringá, Paraná"},
+    {nome:"Parque do Ingá", query:"Parque do Ingá, Maringá, Paraná"},
+    {nome:"Parque do Japão", query:"Parque do Japão, Maringá, Paraná"},
+    {nome:"Bosque dos Pioneiros", query:"Parque Florestal dos Pioneiros Bosque 2, Maringá"} ] },
   "Astorga": { emoji:"🎸", locais:[
     {nome:"Parque Lago Azul", query:"Parque Lago Azul, Astorga, PR"},
     {nome:"Portal Chitãozinho e Xororó", query:"Portal Chitãozinho e Xororó, Astorga, PR"} ] },
@@ -751,9 +756,14 @@ function aplicarTextos(p){
   return p;
 }
 
+const _vistos = new Set();
 const pontos = embaralhar(
   [...destaques, ...genericas.map(expandir)]
     .filter(p => !REMOVER.has(p.cidade))
     .map(aplicarCuradoria)
     .map(aplicarTextos)
+    // um card por cidade (mantém o primeiro; junta os pontos via CURADORIA)
+    .filter(p => _vistos.has(p.cidade) ? false : (_vistos.add(p.cidade), true))
+    // imagem de cada card passa a ser a BANDEIRA da cidade
+    .map(p => { p.imagem = "imagens/bandeiras/" + slug(p.cidade) + ".png"; p.credito = ""; return p; })
 );
