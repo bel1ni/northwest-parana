@@ -764,6 +764,18 @@ const pontos = embaralhar(
     .map(aplicarTextos)
     // um card por cidade (mantém o primeiro; junta os pontos via CURADORIA)
     .filter(p => _vistos.has(p.cidade) ? false : (_vistos.add(p.cidade), true))
-    // imagem de cada card passa a ser a BANDEIRA da cidade
-    .map(p => { p.imagem = "imagens/bandeiras/" + slug(p.cidade) + ".png"; p.credito = ""; return p; })
+    // anexa os LUGARES REAIS (Google Maps) e usa a foto do lugar top como
+    // imagem do card; se a cidade não tiver lugar verificado, cai na bandeira.
+    .map(p => {
+      const lg = (typeof LUGARES !== "undefined" && LUGARES[p.cidade]) ? LUGARES[p.cidade] : [];
+      p.lugares = lg;
+      if (lg.length && lg[0].foto) {
+        p.imagem = lg[0].foto;          // foto do lugar mais relevante (Google)
+        p.credito = "Google Maps";
+      } else {
+        p.imagem = "imagens/bandeiras/" + slug(p.cidade) + ".png";  // fallback: bandeira
+        p.credito = "";
+      }
+      return p;
+    })
 );
