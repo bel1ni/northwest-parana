@@ -276,7 +276,7 @@
       const s=document.createElement('div');
       s.className='slide';
       s.innerHTML=`
-        <div class="foto" style="background-image:${p.cor}"><div class="emoji-fundo">${p.emoji}</div></div>
+        <div class="foto" data-bg="${p.imagem}" style="background-image:${p.cor}"><div class="emoji-fundo">${p.emoji}</div></div>
         <div class="acento" style="background:linear-gradient(90deg,${cor},transparent)"></div>
         ${p.credito?`<div class="credito-foto">📷 Foto: ${p.credito}</div>`:""}
         <div class="conteudo">
@@ -291,7 +291,7 @@
             <div class="lug-grid">
               ${p.lugares.map(l=>{
                 const href=l.maps||("https://www.google.com/maps/search/?api=1&query="+encodeURIComponent(l.nome+" "+p.cidade+" PR"));
-                const foto=l.foto?`style="background-image:url('${l.foto}')"`:'';
+                const foto=l.foto?`data-bg="${l.foto}"`:'';
                 return `<a class="lug" href="${href}" target="_blank" rel="noopener">
                   <span class="lug-foto" ${foto}></span>
                   <span class="lug-txt">
@@ -312,11 +312,27 @@
           </div>
         </div>`;
       trilho.appendChild(s);
-      const foto=s.querySelector('.foto'), t=new Image();
-      t.onload=()=>{foto.style.backgroundImage=`url('${p.imagem}')`;s.querySelector('.emoji-fundo').style.display='none';};
-      t.src=p.imagem;
     });
     const slidesEl=[...trilho.children];
+
+    /* ---- LAZY LOADING: carrega a imagem só quando o card é visto ---- */
+    function carregarSlide(s){
+      if(!s || s.dataset.carregado) return;
+      s.dataset.carregado="1";
+      const f=s.querySelector('.foto'), bg=f&&f.dataset.bg;
+      if(bg){
+        const im=new Image();
+        im.onload=()=>{ f.style.backgroundImage=`url('${bg}')`;
+          const e=f.querySelector('.emoji-fundo'); if(e) e.style.display='none'; };
+        im.src=bg;
+      }
+      s.querySelectorAll('.lug-foto[data-bg]').forEach(el=>{
+        el.style.backgroundImage=`url('${el.dataset.bg}')`;
+      });
+    }
+    function carregarVizinhos(p){          // carrega o atual + anterior + próximo
+      [p-1,p,p+1].forEach(k=>{ if(k>=0&&k<visiveis.length) carregarSlide(slidesEl[visiveis[k]]); });
+    }
 
     /* ---- FILTROS ---- */
     const regioes=["Todos",...ordemRegiao.filter(r=>pontos.some(p=>p.regiao===r))];
@@ -382,6 +398,7 @@
         return;
       }
       const vm=document.getElementById('vazioMsg'); if(vm) vm.remove();
+      carregarVizinhos(pos);
       const idx=visiveis[pos];
       trilho.style.transform=`translateX(-${idx*100}%)`;
       slidesEl.forEach((s,i)=>s.classList.toggle('ativo',i===idx));
