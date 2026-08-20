@@ -6,3 +6,6 @@ Thumbs.db
 
 .vercel
 .env*
+
+# pasta de documentação privada (visão, monetização, concorrentes) — não publicar
+Documentação/
